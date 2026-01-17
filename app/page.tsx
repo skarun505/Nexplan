@@ -28,17 +28,30 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
-            {/* Header - Logo */}
-            <header className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center bg-white/80 backdrop-blur-md">
-                <div className="flex items-center gap-2">
-                    <img src="/header-logo.png" alt="Nexplan Logo" className="h-10 w-auto" />
-                </div>
-                <a
-                    href="#contact"
-                    className="px-6 py-2.5 bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all text-sm"
+            {/* Header - Floating Dynamic */}
+            <header
+                className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${scrollY > 50 ? 'top-4' : 'top-6'
+                    }`}
+            >
+                <div
+                    className={`flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full shadow-lg border border-white/20 transition-all duration-300 ${scrollY > 50 ? 'px-6 py-2 w-[90%] max-w-4xl' : 'px-8 py-4 w-[95%] max-w-6xl'
+                        }`}
                 >
-                    Get in Touch
-                </a>
+                    <div className="flex items-center gap-2">
+                        <img
+                            src="/header-logo.png"
+                            alt="Nexplan Logo"
+                            className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`}
+                        />
+                    </div>
+                    <a
+                        href="#contact"
+                        className={`bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all text-sm ${scrollY > 50 ? 'px-4 py-2' : 'px-6 py-2.5'
+                            }`}
+                    >
+                        Get in Touch
+                    </a>
+                </div>
             </header>
 
             {/* Hero Section - White Theme */}
