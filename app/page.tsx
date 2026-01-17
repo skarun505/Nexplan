@@ -290,7 +290,12 @@ export default function Home() {
                                     "/partners/partner-2.png",
                                     "/partners/partner-3.png",
                                     "/partners/partner-4.png",
-                                    "/partners/partner-5.png"
+                                    "/partners/partner-5.png",
+                                    "/partners/partner-6.png",
+                                    "/partners/partner-7.png",
+                                    "/partners/partner-8.png",
+                                    "/partners/partner-9.png",
+                                    "/partners/partner-10.png"
                                 ].map((src, i) => (
                                     <div key={`logo-${setIndex}-${i}`} className="mx-12 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                         <img
