@@ -35,8 +35,8 @@ export default function Home() {
             >
                 <div
                     className={`flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full border border-white/20 transition-all duration-500 ease-in-out ${scrollY > 50
-                            ? 'px-6 py-3 w-[92%] md:w-[450px] shadow-xl bg-white/90'
-                            : 'px-8 py-5 w-[95%] max-w-6xl shadow-lg'
+                        ? 'px-6 py-3 w-[92%] md:w-[450px] shadow-xl bg-white/90'
+                        : 'px-8 py-5 w-[95%] max-w-6xl shadow-lg'
                         }`}
                 >
                     <div className="flex items-center gap-2">
@@ -85,10 +85,14 @@ export default function Home() {
                         <span className="text-gradient">Enterprise Intelligence</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                        Transform enterprise planning into a decision intelligence layer that connects strategy,
-                        finance, operations, and workforce across your organization.
-                    </p>
+                    <div className="space-y-6 max-w-4xl mx-auto">
+                        <p className="text-xl md:text-2xl text-gray-800 font-light leading-relaxed">
+                            Nexplan transforms enterprise planning into a decision intelligence layer connecting strategy, finance, operations, and workforce across the enterprise.
+                        </p>
+                        <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+                            From static budgets to continuous foresight, we partner with leadership teams to build planning ecosystems that drive smarter, faster, and more confident decisions.
+                        </p>
+                    </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                         <a
@@ -97,12 +101,6 @@ export default function Home() {
                         >
                             Start the Conversation
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </a>
-                        <a
-                            href="#approach"
-                            className="px-8 py-4 border-2 border-purple-300 hover:border-purple-600 text-gray-700 hover:text-purple-700 rounded-full font-semibold transition-all duration-300 hover:bg-purple-50"
-                        >
-                            Learn More
                         </a>
                     </div>
                 </div>
@@ -115,7 +113,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Philosophy Section */}
+            {/* Philosophy: From Static Cycles to Intelligence */}
             <section className="py-32 px-4 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
@@ -125,28 +123,48 @@ export default function Home() {
                         <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full" />
                     </div>
 
-                    <div className="space-y-8 text-lg text-gray-700 leading-relaxed fade-in-up">
-                        <p className="text-center max-w-3xl mx-auto">
-                            Planning is evolving. Enterprises need systems that <span className="text-purple-600 font-semibold">sense change</span>,
+                    <div className="space-y-8 text-lg text-gray-700 leading-relaxed fade-in-up text-center max-w-4xl mx-auto">
+                        <p>
+                            Planning is evolving. Enterprises today need systems that <span className="text-purple-600 font-semibold">sense change</span>,
                             learn from data, and guide leadership decisions continuously.
                         </p>
+                        <p>
+                            Nexplan was founded to help organizations move beyond traditional planning into intelligent, adaptive decision systems. We focus on strategy, foresight, and actionable intelligence — not repeating old models. Our goal is to make planning a trusted, strategic capability for enterprise leaders.
+                        </p>
+                        <p className="font-medium text-gray-900">
+                            At Nexplan, we help organizations rethink planning as intelligence in motion. We don’t just create better plans — we enable better decisions at leadership speed, turning planning from a process into a strategic advantage.
+                        </p>
+                    </div>
 
-                        <div className="grid md:grid-cols-3 gap-8 pt-12">
-                            {[
-                                { icon: Brain, title: "Intelligent", desc: "Adaptive decision systems" },
-                                { icon: Zap, title: "Real-time", desc: "Continuous foresight" },
-                                { icon: Target, title: "Strategic", desc: "Leadership-driven" }
-                            ].map((item, i) => (
-                                <div
-                                    key={i}
-                                    className="fade-in-up text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 hover:border-purple-300 card-hover shadow-sm hover:shadow-lg"
-                                    style={{ transitionDelay: `${i * 100}ms` }}
-                                >
-                                    <item.icon className="w-12 h-12 mx-auto mb-4 text-purple-600" />
-                                    <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
-                                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                                </div>
-                            ))}
+                    {/* Planning as a Leadership Capability */}
+                    <div className="mt-24 fade-in-up">
+                        <div className="bg-purple-50 rounded-3xl p-10 md:p-14 border border-purple-100">
+                            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
+                                Planning as a <span className="text-purple-700">Leadership Capability</span>
+                            </h3>
+
+                            <p className="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                                Planning today is a leadership function, not just a finance process. We work with CFOs, COOs, CHROs, and strategy teams to create a shared decision intelligence layer across the enterprise.
+                            </p>
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { title: "Foresight", desc: "Over hindsight" },
+                                    { title: "Signals", desc: "Over static assumptions" },
+                                    { title: "Continuous Intelligence", desc: "Over annual cycles" },
+                                    { title: "Business-Owned Models", desc: "Over IT-owned systems" },
+                                    { title: "Ready for AI", desc: "Enabled capabilities" },
+                                ].map((item, i) => (
+                                    <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-purple-100 flex flex-col items-center text-center">
+                                        <div className="font-bold text-gray-900 text-lg mb-1">{item.title}</div>
+                                        <div className="text-purple-600 font-medium text-sm uppercase tracking-wider">{item.desc}</div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <p className="text-center text-gray-600 mt-10 italic">
+                                "The result is a planning environment leadership trusts to navigate growth, volatility, and transformation."
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -157,10 +175,10 @@ export default function Home() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-20 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Our <span className="text-gradient">Approach</span>
+                            Our Approach to <span className="text-gradient">Intelligent Planning</span>
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            Four strategic pillars for intelligent planning
+                            Four strategic pillars for continuous enterprise intelligence
                         </p>
                     </div>
 
@@ -169,25 +187,25 @@ export default function Home() {
                             {
                                 num: "01",
                                 title: "Enterprise Planning Strategy",
-                                desc: "Align finance, operations, workforce, and growth into a single decision framework.",
+                                desc: "We help leadership teams define how planning supports business strategy — aligning finance, operations, workforce, and growth priorities into a single decision framework.",
                                 icon: Target
                             },
                             {
                                 num: "02",
                                 title: "Intelligent Platform Implementation",
-                                desc: "Deploy modern platforms like Anaplan and Pigment as your source of truth.",
+                                desc: "We design and implement modern planning platforms such as Anaplan and Pigment, integrating data, models, and workflows to create a single source of truth for enterprise decisions.",
                                 icon: Brain
                             },
                             {
                                 num: "03",
-                                title: "Adoption & Enablement",
-                                desc: "Drive executive alignment, training, and capability building across teams.",
+                                title: "Adoption, Enablement & Change",
+                                desc: "We ensure planning becomes a living capability — driving adoption through executive alignment, training, and capability building across teams.",
                                 icon: Users
                             },
                             {
                                 num: "04",
-                                title: "Continuous Optimization",
-                                desc: "Evolve planning with scenario intelligence and proactive enhancements.",
+                                title: "Continuous Optimization & Support",
+                                desc: "We proactively evolve planning environments with scenario intelligence, enhancements, and roadmap development — so planning keeps pace with business change.",
                                 icon: TrendingUp
                             }
                         ].map((item, i) => (
@@ -205,7 +223,7 @@ export default function Home() {
                                     <div className="flex-1">
                                         <div className="text-6xl font-bold text-purple-100 mb-2">{item.num}</div>
                                         <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gradient transition-colors">{item.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.desc}</p>
                                     </div>
                                 </div>
                             </div>
@@ -214,26 +232,33 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Industries */}
+            {/* Enterprise Expertise Across Sectors */}
             <section className="py-32 px-4 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Cross-Industry <span className="text-gradient">Expertise</span>
+                            Enterprise Expertise <span className="text-gradient">Across Sectors</span>
                         </h2>
-                        <p className="text-gray-600">Trusted across sectors worldwide</p>
+                        <p className="text-gray-600">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
 
-                    <div className="fade-in-up flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <div className="fade-in-up flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
                         {[
-                            "Aerospace & Aviation", "Telecommunications", "Manufacturing",
-                            "Retail & Consumer", "Technology & SaaS", "Banking & Insurance",
-                            "Energy & Utilities", "Pharmaceuticals", "Healthcare",
-                            "Real Estate", "Metal & Mining"
+                            "Aerospace & Aviation",
+                            "Telecommunications",
+                            "Manufacturing",
+                            "Retail & Consumer Goods",
+                            "Technology & SaaS",
+                            "Banking & Insurance",
+                            "Energy & Utilities",
+                            "Metal & Mining",
+                            "Pharmaceuticals & Life Sciences",
+                            "Healthcare",
+                            "Real Estate/Construction"
                         ].map((industry, i) => (
                             <div
                                 key={i}
-                                className="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 hover:border-purple-500 hover:bg-purple-100 transition-all duration-300 text-sm font-medium text-gray-700 hover:text-purple-700 cursor-default"
+                                className="px-6 py-3 rounded-full bg-purple-50 border border-purple-200 hover:border-purple-500 hover:bg-purple-100 transition-all duration-300 text-base font-medium text-gray-700 hover:text-purple-700 cursor-default shadow-sm hover:shadow-md"
                             >
                                 {industry}
                             </div>
@@ -242,45 +267,69 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Use Cases */}
+            {/* Enterprise Planning Use Cases */}
             <section className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Planning <span className="text-gradient">Use Cases</span>
+                            Enterprise Planning <span className="text-gradient">Use Cases</span>
                         </h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
-                                title: "Finance",
-                                items: ["Budget Planning", "Cash Flow Management", "Scenario Modeling", "Investment Planning"]
+                                title: "Finance Teams",
+                                items: [
+                                    "Budget Planning & Forecasting",
+                                    "P&L, Cash Flow & Balance Sheet",
+                                    "Rolling Forecasts & Scenarios",
+                                    "Variance Analysis & Performance",
+                                    "Strategic Investment & Capital"
+                                ]
                             },
                             {
-                                title: "HR & Workforce",
-                                items: ["Headcount Planning", "Talent Allocation", "Compensation Planning", "Succession Planning"]
+                                title: "HR & Workforce Teams",
+                                items: [
+                                    "Headcount Planning & Optimization",
+                                    "Workforce Forecasting",
+                                    "Talent & Capacity Planning",
+                                    "Compensation & Benefits",
+                                    "Skills & Succession Planning"
+                                ]
                             },
                             {
-                                title: "Sales & Revenue",
-                                items: ["Sales Forecasting", "Quota Planning", "Territory Alignment", "Pipeline Management"]
+                                title: "Sales & Revenue Teams",
+                                items: [
+                                    "Sales Forecasting",
+                                    "Quota & Incentive Planning",
+                                    "Territory Alignment",
+                                    "Account Scoring & Segmentation",
+                                    "Pipeline & Revenue Planning"
+                                ]
                             },
                             {
-                                title: "Retail",
-                                items: ["Merchandise Planning", "Inventory Optimization", "Assortment Planning", "Promotion Planning"]
+                                title: "Retail & Merchandise",
+                                items: [
+                                    "Open-to-Buy (OTB) Planning",
+                                    "Merchandise Financial Planning",
+                                    "Assortment & Category Planning",
+                                    "Inventory Optimization",
+                                    "Promotion & Markdown Planning"
+                                ]
                             }
                         ].map((useCase, i) => (
                             <div
                                 key={i}
-                                className="fade-in-up p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-purple-300 transition-all duration-300 card-hover shadow-sm hover:shadow-lg"
+                                className="fade-in-up p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-purple-300 transition-all duration-300 card-hover shadow-sm hover:shadow-lg h-full"
                                 style={{ transitionDelay: `${i * 100}ms` }}
                             >
-                                <h3 className="text-xl font-bold mb-4 text-gradient-purple">{useCase.title}</h3>
-                                <ul className="space-y-2">
+                                <h3 className="text-xl font-bold mb-4 text-gradient-purple min-h-[56px] flex items-end">{useCase.title}</h3>
+                                <ul className="space-y-3">
                                     {useCase.items.map((item, j) => (
                                         <li key={j} className="text-sm text-gray-600 flex items-start gap-2">
-                                            <span className="text-purple-600 mt-1">•</span>
-                                            {item}
+                                            <span className="text-purple-600 mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-600 flex-shrink-0" />
+                                            <span className="leading-snug">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -295,11 +344,14 @@ export default function Home() {
                 <div className="max-w-6xl mx-auto text-center mb-12">
                     <div className="fade-in-up">
                         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-                            Our Technology <span className="text-gradient">Partners</span>
+                            Our Technology <span className="text-gradient">Ecosystem</span>
                         </h2>
-                        <p className="text-gray-600 text-lg">
-                            We design ecosystems, not just implement tools
-                        </p>
+                        <div className="text-gray-600 text-lg space-y-2 max-w-3xl mx-auto">
+                            <p>Nexplan designs ecosystems, not just implements tools.</p>
+                            <p className="text-sm md:text-base">
+                                We ensure technology serves business decisions, not the other way around. As platforms evolve with automation and intelligence, Nexplan ensures adoption is strategic, governed, and value-driven.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -345,17 +397,17 @@ export default function Home() {
 
                         <div className="relative z-10 text-center space-y-8">
                             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                                Let's <span className="text-gradient">Connect</span>
+                                Get In <span className="text-gradient">Touch</span>
                             </h2>
 
                             <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                                Ready for continuous, intelligent decision-making? Let's build your planning intelligence together.
+                                If your organization is ready to move from static planning to continuous, intelligent decision-making, Nexplan partners with you from strategy to execution.
                             </p>
 
-                            <div className="flex flex-wrap justify-center gap-4 pt-4">
+                            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 pt-4">
                                 <a
                                     href="mailto:connect@nexplan.ai"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
                                 >
                                     <Mail className="w-5 h-5 text-purple-600" />
                                     <span className="text-sm font-medium text-gray-700">connect@nexplan.ai</span>
@@ -363,7 +415,7 @@ export default function Home() {
 
                                 <a
                                     href="tel:+971547912051"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
                                 >
                                     <Phone className="w-5 h-5 text-purple-600" />
                                     <span className="text-sm font-medium text-gray-700">+971 547912051</span>
@@ -373,10 +425,10 @@ export default function Home() {
                                     href="https://www.nexplan.ai"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
                                 >
                                     <Globe className="w-5 h-5 text-purple-600" />
-                                    <span className="text-sm font-medium text-gray-700">nexplan.ai</span>
+                                    <span className="text-sm font-medium text-gray-700">www.nexplan.ai</span>
                                 </a>
                             </div>
 
@@ -385,7 +437,7 @@ export default function Home() {
                                     href="mailto:connect@nexplan.ai"
                                     className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                                 >
-                                    Get Started
+                                    Let’s Build Your Planning Intelligence
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>
@@ -397,26 +449,28 @@ export default function Home() {
             {/* Footer */}
             <footer className="border-t-2 border-gray-200 py-12 px-4 bg-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center space-y-6">
-                        <p className="text-xl font-semibold text-gray-900">
-                            <span className="text-gradient">Nexplan</span> — Intelligent Planning for Decision-Driven Enterprises
-                        </p>
+                    <div className="text-center space-y-8">
+                        <div>
+                            <p className="text-xl font-semibold text-gray-900 mb-2">
+                                <span className="text-gradient">Nexplan</span>: Intelligent Planning for Decision-Driven Enterprises.
+                            </p>
+                            <p className="text-sm text-purple-600 font-medium tracking-wide border-t border-gray-100 inline-block pt-2">
+                                PLANNING REIMAGINED
+                            </p>
+                        </div>
 
-                        <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-600">
-                            <span>USA</span>
-                            <span className="text-purple-600">•</span>
-                            <span>UAE</span>
-                            <span className="text-purple-600">•</span>
-                            <span>UK</span>
-                            <span className="text-purple-600">•</span>
-                            <span>India</span>
+                        <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-700">
+                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> USA</span>
+                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> UAE</span>
+                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> UK</span>
+                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> India</span>
                         </div>
 
                         <div className="flex justify-center gap-4 text-sm text-gray-600">
                             <a href="mailto:info@nexplan.ai" className="hover:text-purple-600 transition-colors">
                                 info@nexplan.ai
                             </a>
-                            <span>|</span>
+                            <span className="text-gray-300">|</span>
                             <a href="https://www.nexplan.ai" className="hover:text-purple-600 transition-colors">
                                 www.nexplan.ai
                             </a>
