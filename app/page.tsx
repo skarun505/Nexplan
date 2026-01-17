@@ -28,8 +28,21 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
+            {/* Header - Logo */}
+            <header className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center bg-white/80 backdrop-blur-md">
+                <div className="flex items-center gap-2">
+                    <img src="/header-logo.png" alt="Nexplan Logo" className="h-10 w-auto" />
+                </div>
+                <a
+                    href="#contact"
+                    className="px-6 py-2.5 bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all text-sm"
+                >
+                    Get in Touch
+                </a>
+            </header>
+
             {/* Hero Section - White Theme */}
-            <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-purple-50 via-white to-white">
+            <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-purple-50 via-white to-white pt-20">
                 {/* Animated Background Blobs */}
                 <div className="absolute inset-0 overflow-hidden opacity-40">
                     <div
@@ -301,7 +314,7 @@ export default function Home() {
                                         <img
                                             src={src}
                                             alt="Technology Partner"
-                                            className="h-10 md:h-12 w-auto object-contain max-w-[150px]"
+                                            className="h-16 md:h-20 w-auto object-contain max-w-[200px]"
                                         />
                                     </div>
                                 ))}
