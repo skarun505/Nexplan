@@ -314,7 +314,7 @@ export default function Home() {
                                         <img
                                             src={src}
                                             alt="Technology Partner"
-                                            className="h-16 md:h-20 w-auto object-contain max-w-[200px]"
+                                            className="h-24 md:h-32 w-auto object-contain max-w-[280px]"
                                         />
                                     </div>
                                 ))}
