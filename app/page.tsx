@@ -30,23 +30,25 @@ export default function Home() {
         <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
             {/* Header - Floating Dynamic */}
             <header
-                className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${scrollY > 50 ? 'top-6' : 'top-6'
+                className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${scrollY > 50 ? 'top-4' : 'top-6'
                     }`}
             >
                 <div
-                    className={`flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full shadow-lg border border-white/20 transition-all duration-300 ${scrollY > 50 ? 'px-8 py-3 w-auto min-w-[300px] gap-12' : 'px-8 py-4 w-[95%] max-w-6xl'
+                    className={`flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full border border-white/20 transition-all duration-500 ease-in-out ${scrollY > 50
+                            ? 'px-6 py-3 w-[92%] md:w-[450px] shadow-xl bg-white/90'
+                            : 'px-8 py-5 w-[95%] max-w-6xl shadow-lg'
                         }`}
                 >
                     <div className="flex items-center gap-2">
                         <img
                             src="/header-logo.png"
                             alt="Nexplan Logo"
-                            className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-9' : 'h-10'}`}
+                            className={`w-auto transition-all duration-500 ease-in-out ${scrollY > 50 ? 'h-8' : 'h-10'}`}
                         />
                     </div>
                     <a
                         href="#contact"
-                        className={`bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all text-sm ${scrollY > 50 ? 'px-5 py-2.5' : 'px-6 py-2.5'
+                        className={`bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all duration-500 ease-in-out text-sm ${scrollY > 50 ? 'px-5 py-2' : 'px-7 py-3'
                             }`}
                     >
                         Get in Touch
