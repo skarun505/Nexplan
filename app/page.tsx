@@ -318,47 +318,6 @@ export default function Home() {
                                     "Inventory & Sell-Through Optimization",
                                     "Promotion & Markdown Planning"
                                 ]
-                            },
-                            {
-                                title: "Finance Teams",
-                                items: [
-                                    "Budget Planning & Forecasting",
-                                    "P&L, Cash Flow & Balance Sheet Planning",
-                                    "Rolling Forecasts & Scenario Modeling",
-                                    "Variance Analysis & Performance Management",
-                                    "Strategic Investment & Capital Allocation"
-                                ]
-                            },
-                            {
-                                title: "HR & Workforce Teams",
-                                items: [
-                                    "Headcount Planning & Optimization",
-                                    "Workforce Forecasting & Scenario Planning",
-                                    "Talent Allocation & Capacity Planning",
-                                    "Compensation & Benefits Planning",
-                                    "Skills & Succession Planning"
-                                ]
-                            },
-                            {
-                                title: "Sales & Revenue Teams",
-                                items: [
-                                    "Sales Forecasting",
-                                    "Sales Capacity & Coverage Planning",
-                                    "Quota & Incentive Planning",
-                                    "Territory Alignment",
-                                    "Account Scoring & Segmentation",
-                                    "Pipeline & Revenue Planning"
-                                ]
-                            },
-                            {
-                                title: "Retail & Merchandise Teams",
-                                items: [
-                                    "Open-to-Buy (OTB) Planning",
-                                    "Merchandise Financial Planning (MFP)",
-                                    "Assortment & Category Planning",
-                                    "Inventory & Sell-Through Optimization",
-                                    "Promotion & Markdown Planning"
-                                ]
                             }
                         ].map((useCase, i) => (
                             <div
