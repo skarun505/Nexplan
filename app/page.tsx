@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
 
 export default function Home() {
@@ -234,7 +234,7 @@ export default function Home() {
 
             {/* Enterprise Expertise Across Sectors */}
             <section className="py-32 px-4 bg-white">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                             Enterprise Expertise <span className="text-gradient">Across Sectors</span>
@@ -242,25 +242,31 @@ export default function Home() {
                         <p className="text-gray-600">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
 
-                    <div className="fade-in-up flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-up">
                         {[
-                            "Aerospace & Aviation",
-                            "Telecommunications",
-                            "Manufacturing",
-                            "Retail & Consumer Goods",
-                            "Technology & SaaS",
-                            "Banking & Insurance",
-                            "Energy & Utilities",
-                            "Metal & Mining",
-                            "Pharmaceuticals & Life Sciences",
-                            "Healthcare",
-                            "Real Estate/Construction"
-                        ].map((industry, i) => (
+                            { title: "Aerospace & Aviation", desc: "Planning for operations, capacity, and strategic growth", icon: Rocket },
+                            { title: "Telecommunications", desc: "Forecasting, revenue planning, and network optimization", icon: Zap },
+                            { title: "Manufacturing", desc: "Demand, supply chain, and capital planning", icon: Factory },
+                            { title: "Retail & Consumer Goods", desc: "Inventory, revenue, and workforce planning", icon: ShoppingBag },
+                            { title: "Technology & SaaS", desc: "Subscription revenue, headcount, and product portfolio planning", icon: Cpu },
+                            { title: "Banking & Insurance", desc: "Financial planning, risk management, and capital allocation", icon: Building2 },
+                            { title: "Energy & Utilities", desc: "Project, capex, and operational forecasting", icon: Lightbulb },
+                            { title: "Metal & Mining", desc: "Production, resource allocation, and investment planning", icon: Hammer },
+                            { title: "Pharmaceuticals & Life Sciences", desc: "R&D investment, supply chain, and revenue forecasting", icon: FlaskConical },
+                            { title: "Healthcare", desc: "Resource optimization and patient care planning", icon: Heart },
+                            { title: "Real Estate & Construction", desc: "Project lifecycle and capital investment planning", icon: Building }
+                        ].map((item, i) => (
                             <div
                                 key={i}
-                                className="px-6 py-3 rounded-full bg-purple-50 border border-purple-200 hover:border-purple-500 hover:bg-purple-100 transition-all duration-300 text-base font-medium text-gray-700 hover:text-purple-700 cursor-default shadow-sm hover:shadow-md"
+                                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 flex items-start gap-4"
                             >
-                                {industry}
+                                <div className="p-3 rounded-xl bg-purple-50 group-hover:bg-purple-100 text-purple-600 transition-colors">
+                                    <item.icon className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-purple-700 transition-colors">{item.title}</h3>
+                                    <p className="text-sm text-gray-600 leading-snug">{item.desc}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
