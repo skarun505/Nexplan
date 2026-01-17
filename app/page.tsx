@@ -263,25 +263,43 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Technology */}
-            <section className="py-32 px-4 bg-white">
-                <div className="max-w-5xl mx-auto text-center">
+            {/* Technology - Logo Ticker */}
+            <section className="py-24 px-4 bg-white overflow-hidden">
+                <div className="max-w-6xl mx-auto text-center mb-12">
                     <div className="fade-in-up">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
                             Our Technology <span className="text-gradient">Partners</span>
                         </h2>
-                        <p className="text-gray-600 mb-12 text-lg">
+                        <p className="text-gray-600 text-lg">
                             We design ecosystems, not just implement tools
                         </p>
                     </div>
+                </div>
 
-                    <div className="fade-in-up flex flex-wrap justify-center gap-6">
-                        {["Anaplan", "Pigment", "OneStream", "Planful", "Jedox", "Board"].map((tech, i) => (
-                            <div
-                                key={i}
-                                className="px-8 py-4 rounded-xl bg-purple-50 border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-100 transition-all duration-300 font-semibold text-gray-800 hover:text-purple-700"
-                            >
-                                {tech}
+                <div className="fade-in-up relative flex w-full overflow-hidden">
+                    {/* Mask for fade effect on edges */}
+                    <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+                    <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+
+                    <div className="flex animate-marquee whitespace-nowrap items-center pause-on-hover">
+                        {/* Repeat logos 3 times for smooth infinity loop on wide screens */}
+                        {[...Array(3)].map((_, setIndex) => (
+                            <div key={`set-${setIndex}`} className="flex">
+                                {[
+                                    "/partners/partner-1.png",
+                                    "/partners/partner-2.png",
+                                    "/partners/partner-3.png",
+                                    "/partners/partner-4.png",
+                                    "/partners/partner-5.png"
+                                ].map((src, i) => (
+                                    <div key={`logo-${setIndex}-${i}`} className="mx-12 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                        <img
+                                            src={src}
+                                            alt="Technology Partner"
+                                            className="h-10 md:h-12 w-auto object-contain max-w-[150px]"
+                                        />
+                                    </div>
+                                ))}
                             </div>
                         ))}
                     </div>
