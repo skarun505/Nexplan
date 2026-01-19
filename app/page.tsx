@@ -202,7 +202,6 @@ export default function Home() {
                             { title: "Aerospace & Aviation", desc: "Planning for operations, capacity, and strategic growth", icon: Rocket },
                             { title: "Telecommunications", desc: "Forecasting, revenue planning, and network optimization", icon: Zap },
                             { title: "Manufacturing", desc: "Demand, supply chain, and capital planning", icon: Factory },
-                            { title: "Retail & Consumer Goods", desc: "Inventory, revenue, and workforce planning", icon: ShoppingBag },
                             { title: "Technology & SaaS", desc: "Subscription revenue, headcount, and product portfolio planning", icon: Cpu },
                             { title: "Banking & Insurance", desc: "Financial planning, risk management, and capital allocation", icon: Building2 },
                             { title: "Energy & Utilities", desc: "Project, capex, and operational forecasting", icon: Lightbulb },
@@ -270,7 +269,7 @@ export default function Home() {
                                 ]
                             },
                             {
-                                title: "Retail & Merchandise Teams",
+                                title: "Retail & Merch Teams",
                                 items: [
                                     "Open-to-Buy (OTB) Planning",
                                     "Merchandise Financial Planning (MFP)",
@@ -442,18 +441,6 @@ export default function Home() {
                                             <div className="font-semibold">www.nexplan.ai</div>
                                         </div>
                                     </a>
-                                </div>
-                            </div>
-
-                            <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
-                                <h3 className="text-lg font-bold text-gray-900 mb-4">Global Presence</h3>
-                                <div className="grid grid-cols-2 gap-3">
-                                    {['USA', 'UAE', 'UK', 'India'].map((location, i) => (
-                                        <div key={i} className="flex items-center gap-2 text-gray-700">
-                                            <div className="w-2 h-2 rounded-full bg-primary"></div>
-                                            <span className="text-sm font-medium">{location}</span>
-                                        </div>
-                                    ))}
                                 </div>
                             </div>
                         </div>
