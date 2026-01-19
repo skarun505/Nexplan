@@ -40,7 +40,7 @@ export default function Home() {
             </header>
 
             {/* Hero Section - Clean & Professional */}
-            <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+            <section className="pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center space-y-8 md:space-y-10">
                         {/* Badge */}
@@ -130,7 +130,7 @@ export default function Home() {
             </section>
 
             {/* Our Approach */}
-            <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-gray-50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -188,7 +188,7 @@ export default function Home() {
             </section>
 
             {/* Enterprise Expertise */}
-            <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -227,7 +227,7 @@ export default function Home() {
             </section>
 
             {/* Use Cases */}
-            <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -296,7 +296,7 @@ export default function Home() {
             </section>
 
             {/* Technology Ecosystem */}
-            <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
+            <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
                 <div className="max-w-6xl mx-auto text-center mb-12">
                     <div className="fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -338,7 +338,7 @@ export default function Home() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <section id="contact" className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="fade-in-up text-center space-y-4 mb-16">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
