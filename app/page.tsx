@@ -450,13 +450,11 @@ export default function Home() {
                                 </div>
 
                                 <div className="mt-8 pt-8 border-t border-white/20">
-                                    <div className="text-center">
-                                        <div className="text-sm text-white/70 mb-3 font-medium">Global Presence</div>
-                                        <div className="flex flex-wrap justify-center gap-4">
-                                            {['USA', 'UAE', 'UK', 'India'].map((location, i) => (
-                                                <span key={i} className="text-sm font-semibold">{location}</span>
-                                            ))}
-                                        </div>
+                                    <div className="text-center space-y-3">
+                                        <div className="text-lg font-bold">Let's Start the Conversation</div>
+                                        <p className="text-sm text-white/80 leading-relaxed">
+                                            We respond within 24 hours and partner with you from strategy to execution.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
