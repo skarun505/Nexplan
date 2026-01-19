@@ -52,8 +52,9 @@ export default function Home() {
                         {/* Main Headline */}
                         <div className="space-y-4">
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
-                                Reimagining Planning as<br />
-                                <span className="text-primary">Enterprise Intelligence</span>
+                                <span className="block sm:inline">Reimagining Planning as</span>
+                                <br className="hidden sm:block" />
+                                <span className="block text-primary mt-2 sm:mt-0">Enterprise Intelligence</span>
                             </h1>
                         </div>
 
@@ -110,7 +111,7 @@ export default function Home() {
                                 Planning today is a leadership function, not just a finance process. We work with CFOs, COOs, CHROs, and strategy teams to create a shared decision intelligence layer across the enterprise.
                             </p>
 
-                            <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+                            <div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
                                 {[
                                     { title: "Foresight", desc: "Over hindsight" },
                                     { title: "Signals", desc: "Over static assumptions" },
@@ -118,9 +119,9 @@ export default function Home() {
                                     { title: "Business-Owned Models", desc: "Over IT-owned systems" },
                                     { title: "Ready for AI", desc: "Enabled capabilities" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 rounded-xl text-center border border-gray-100 hover:border-primary/30 transition-colors min-w-[200px]">
-                                        <div className="font-bold text-gray-900 text-base md:text-lg mb-2">{item.title}</div>
-                                        <div className="text-primary/70 text-sm font-medium uppercase tracking-wide">{item.desc}</div>
+                                    <div key={i} className="bg-white p-4 md:p-6 rounded-xl text-center border border-gray-100 hover:border-primary/30 transition-colors lg:min-w-[200px]">
+                                        <div className="font-bold text-gray-900 text-sm md:text-base lg:text-lg mb-2">{item.title}</div>
+                                        <div className="text-primary/70 text-xs md:text-sm font-medium uppercase tracking-wide">{item.desc}</div>
                                     </div>
                                 ))}
                             </div>
