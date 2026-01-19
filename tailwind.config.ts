@@ -9,7 +9,14 @@ export default {
         "./src/**/*.{ts,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: {
+                    DEFAULT: '#3A1F5C',
+                    foreground: '#ffffff',
+                }
+            }
+        },
     },
     plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -27,15 +27,15 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
+        <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden font-sans">
             {/* Header - Floating Dynamic */}
             <header
                 className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${scrollY > 50 ? 'top-4' : 'top-6'
                     }`}
             >
                 <div
-                    className={`flex justify-between items-center bg-white/80 backdrop-blur-md rounded-full border border-white/20 transition-all duration-500 ease-in-out ${scrollY > 50
-                        ? 'px-6 py-3 w-[92%] md:w-[450px] shadow-xl bg-white/90'
+                    className={`flex justify-between items-center bg-white/95 backdrop-blur-sm rounded-full border border-gray-100 transition-all duration-500 ease-in-out ${scrollY > 50
+                        ? 'px-6 py-3 w-[92%] md:w-[450px] shadow-xl'
                         : 'px-8 py-5 w-[95%] max-w-6xl shadow-lg'
                         }`}
                 >
@@ -48,41 +48,25 @@ export default function Home() {
                     </div>
                     <a
                         href="#contact"
-                        className={`bg-black text-white hover:bg-gray-800 rounded-full font-medium transition-all duration-500 ease-in-out text-sm ${scrollY > 50 ? 'px-5 py-2' : 'px-7 py-3'
+                        className={`bg-primary text-white hover:bg-[#2a1645] rounded-full font-medium transition-all duration-500 ease-in-out text-sm ${scrollY > 50 ? 'px-5 py-2' : 'px-7 py-3'
                             }`}
                     >
                         Get in Touch
                     </a>
                 </div>
             </header>
-            {/* Hero Section - White Theme */}
-            <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-purple-50 via-white to-white pt-20">
-                {/* Animated Background Blobs */}
-                <div className="absolute inset-0 overflow-hidden opacity-40">
-                    <div
-                        className="absolute top-1/4 -left-1/4 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl animate-float"
-                        style={{ animationDelay: '0s', transform: `translateY(${scrollY * 0.2}px)` }}
-                    />
-                    <div
-                        className="absolute top-1/3 -right-1/4 w-96 h-96 bg-pink-200 rounded-full filter blur-3xl animate-float"
-                        style={{ animationDelay: '2s', transform: `translateY(${scrollY * 0.3}px)` }}
-                    />
-                    <div
-                        className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl animate-float"
-                        style={{ animationDelay: '4s', transform: `translateY(${scrollY * 0.15}px)` }}
-                    />
-                </div>
-
+            {/* Hero Section - Professional & Clean */}
+            <section className="relative min-h-screen flex items-center justify-center px-4 bg-white pt-20">
                 <div className="relative z-10 max-w-6xl mx-auto text-center space-y-12 py-20">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 border border-purple-200 backdrop-blur-sm">
-                        <Sparkles className="w-4 h-4 text-purple-600" />
-                        <span className="text-sm text-purple-700 font-medium">Enterprise Intelligence Platform</span>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100">
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <span className="text-sm text-primary font-semibold tracking-wide uppercase">Enterprise Intelligence Platform</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight text-gray-900">
                         Reimagining Planning as
                         <br />
-                        <span className="text-gradient">Enterprise Intelligence</span>
+                        <span className="text-primary">Enterprise Intelligence</span>
                     </h1>
 
                     <div className="space-y-6 max-w-4xl mx-auto">
@@ -97,7 +81,7 @@ export default function Home() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                         <a
                             href="#contact"
-                            className="group px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+                            className="group px-8 py-4 bg-primary hover:bg-[#2a1645] text-white rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
                         >
                             Start the Conversation
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -107,8 +91,8 @@ export default function Home() {
 
                 {/* Scroll Indicator */}
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-purple-600 rounded-full flex justify-center p-2">
-                        <div className="w-1 h-3 bg-purple-600 rounded-full animate-pulse" />
+                    <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-2">
+                        <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
                     </div>
                 </div>
             </section>
@@ -118,14 +102,14 @@ export default function Home() {
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            From Static Cycles to <span className="text-gradient">Intelligence</span>
+                            From Static Cycles to <span className="text-primary">Intelligence</span>
                         </h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full" />
+                        <div className="w-20 h-1.5 bg-primary mx-auto rounded-full" />
                     </div>
 
                     <div className="space-y-8 text-lg text-gray-700 leading-relaxed fade-in-up text-center max-w-4xl mx-auto">
                         <p>
-                            Planning is evolving. Enterprises today need systems that <span className="text-purple-600 font-semibold">sense change</span>,
+                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-semibold">sense change</span>,
                             learn from data, and guide leadership decisions continuously.
                         </p>
                         <p>
@@ -138,9 +122,9 @@ export default function Home() {
 
                     {/* Planning as a Leadership Capability */}
                     <div className="mt-24 fade-in-up">
-                        <div className="bg-purple-50 rounded-3xl p-10 md:p-14 border border-purple-100">
+                        <div className="bg-gray-50 rounded-3xl p-10 md:p-14 border border-gray-100 shadow-sm">
                             <h3 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">
-                                Planning as a <span className="text-purple-700">Leadership Capability</span>
+                                Planning as a <span className="text-primary">Leadership Capability</span>
                             </h3>
 
                             <p className="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -155,9 +139,9 @@ export default function Home() {
                                     { title: "Business-Owned Models", desc: "Over IT-owned systems" },
                                     { title: "Ready for AI", desc: "Enabled capabilities" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-purple-100 flex flex-col items-center text-center">
+                                    <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:border-primary/30 transition-colors duration-300">
                                         <div className="font-bold text-gray-900 text-lg mb-1">{item.title}</div>
-                                        <div className="text-purple-600 font-medium text-sm uppercase tracking-wider">{item.desc}</div>
+                                        <div className="text-primary/80 font-medium text-sm uppercase tracking-wider">{item.desc}</div>
                                     </div>
                                 ))}
                             </div>
@@ -171,11 +155,11 @@ export default function Home() {
             </section>
 
             {/* Our Approach */}
-            <section id="approach" className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
+            <section id="approach" className="py-32 px-4 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-20 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Our Approach to <span className="text-gradient">Intelligent Planning</span>
+                            Our Approach to <span className="text-primary">Intelligent Planning</span>
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                             Four strategic pillars for continuous enterprise intelligence
@@ -211,18 +195,18 @@ export default function Home() {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="fade-in-up group relative p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-purple-300 transition-all duration-500 card-hover shadow-md hover:shadow-2xl"
+                                className="fade-in-up group relative p-8 rounded-3xl bg-white border border-gray-200 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl"
                                 style={{ transitionDelay: `${i * 150}ms` }}
                             >
                                 <div className="flex items-start gap-6">
                                     <div className="flex-shrink-0">
-                                        <div className="w-16 h-16 rounded-2xl bg-purple-100 border-2 border-purple-200 flex items-center justify-center group-hover:bg-purple-600 group-hover:border-purple-600 transition-colors">
-                                            <item.icon className="w-8 h-8 text-purple-600 group-hover:text-white transition-colors" />
+                                        <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-colors duration-300">
+                                            <item.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                                         </div>
                                     </div>
                                     <div className="flex-1">
-                                        <div className="text-6xl font-bold text-purple-100 mb-2">{item.num}</div>
-                                        <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gradient transition-colors">{item.title}</h3>
+                                        <div className="text-6xl font-bold text-gray-100 group-hover:text-primary/10 transition-colors duration-300 mb-2">{item.num}</div>
+                                        <h3 className="text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
                                         <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.desc}</p>
                                     </div>
                                 </div>
@@ -233,11 +217,11 @@ export default function Home() {
             </section>
 
             {/* Enterprise Expertise Across Sectors */}
-            <section className="py-32 px-4 bg-white">
+            <section className="py-32 px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Enterprise Expertise <span className="text-gradient">Across Sectors</span>
+                            Enterprise Expertise <span className="text-primary">Across Sectors</span>
                         </h2>
                         <p className="text-gray-600">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
@@ -258,13 +242,13 @@ export default function Home() {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 flex items-start gap-4"
+                                className="group p-6 rounded-2xl bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex items-start gap-4"
                             >
-                                <div className="p-3 rounded-xl bg-purple-50 group-hover:bg-purple-100 text-purple-600 transition-colors">
+                                <div className="p-3 rounded-xl bg-gray-50 group-hover:bg-primary/10 text-primary transition-colors">
                                     <item.icon className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-purple-700 transition-colors">{item.title}</h3>
+                                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
                                     <p className="text-sm text-gray-600 leading-snug">{item.desc}</p>
                                 </div>
                             </div>
@@ -274,11 +258,11 @@ export default function Home() {
             </section>
 
             {/* Enterprise Planning Use Cases */}
-            <section className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
+            <section className="py-32 px-4 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 fade-in-up">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                            Enterprise Planning <span className="text-gradient">Use Cases</span>
+                            Enterprise Planning <span className="text-primary">Use Cases</span>
                         </h2>
                     </div>
 
@@ -328,14 +312,14 @@ export default function Home() {
                         ].map((useCase, i) => (
                             <div
                                 key={i}
-                                className="fade-in-up p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-purple-300 transition-all duration-300 card-hover shadow-sm hover:shadow-lg h-full"
+                                className="fade-in-up p-8 rounded-2xl bg-white border border-gray-200 hover:border-primary/40 transition-all duration-300 shadow-sm hover:shadow-xl h-full flex flex-col"
                                 style={{ transitionDelay: `${i * 100}ms` }}
                             >
-                                <h3 className="text-xl font-bold mb-4 text-gradient-purple min-h-[56px] flex items-end">{useCase.title}</h3>
-                                <ul className="space-y-3">
+                                <h3 className="text-xl font-bold mb-6 text-primary h-[56px] flex items-end border-b border-gray-100 pb-4">{useCase.title}</h3>
+                                <ul className="space-y-4 flex-1">
                                     {useCase.items.map((item, j) => (
-                                        <li key={j} className="text-sm text-gray-600 flex items-start gap-2">
-                                            <span className="text-purple-600 mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-600 flex-shrink-0" />
+                                        <li key={j} className="text-sm text-gray-600 flex items-start gap-3">
+                                            <span className="text-primary mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                                             <span className="leading-snug">{item}</span>
                                         </li>
                                     ))}
@@ -347,11 +331,11 @@ export default function Home() {
             </section>
 
             {/* Technology - Logo Ticker */}
-            <section className="py-24 px-4 bg-white overflow-hidden">
+            <section className="py-24 px-4 bg-gray-50 overflow-hidden border-t border-gray-100">
                 <div className="max-w-6xl mx-auto text-center mb-12">
                     <div className="fade-in-up">
                         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-                            Our Technology <span className="text-gradient">Ecosystem</span>
+                            Our Technology <span className="text-primary">Ecosystem</span>
                         </h2>
                         <div className="text-gray-600 text-lg space-y-2 max-w-3xl mx-auto">
                             <p>Nexplan designs ecosystems, not just implements tools.</p>
@@ -364,8 +348,8 @@ export default function Home() {
 
                 <div className="fade-in-up relative flex w-full overflow-hidden">
                     {/* Mask for fade effect on edges */}
-                    <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-                    <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+                    <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+                    <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
 
                     <div className="flex animate-marquee whitespace-nowrap items-center pause-on-hover">
                         {/* Repeat logos 3 times for smooth infinity loop on wide screens */}
@@ -383,7 +367,7 @@ export default function Home() {
                                     "/partners/partner-9.png",
                                     "/partners/partner-10.png"
                                 ].map((src, i) => (
-                                    <div key={`logo-${setIndex}-${i}`} className="mx-12 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <div key={`logo-${setIndex}-${i}`} className="mx-12 flex items-center justify-center opacity-60 hover:opacity-100 grayscale transition-all duration-500 cursor-pointer">
                                         <img
                                             src={src}
                                             alt="Technology Partner"
@@ -398,51 +382,54 @@ export default function Home() {
             </section>
 
             {/* Contact */}
-            <section id="contact" className="py-32 px-4 bg-gradient-to-b from-gray-50 to-white">
+            <section id="contact" className="py-32 px-4 bg-white">
                 <div className="max-w-4xl mx-auto">
-                    <div className="fade-in-up relative p-12 md:p-16 rounded-3xl bg-gradient-to-br from-purple-100 via-purple-50 to-white border-2 border-purple-200 overflow-hidden shadow-xl">
+                    <div className="fade-in-up relative p-12 md:p-16 rounded-3xl bg-primary text-white overflow-hidden shadow-2xl">
+                        {/* Subtle background flair using CSS shapes instead of gradients if needed, or just plain */}
+                        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
 
                         <div className="relative z-10 text-center space-y-8">
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                                Get In <span className="text-gradient">Touch</span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-white">
+                                Get In <span className="text-white/80">Touch</span>
                             </h2>
 
-                            <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+                            <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
                                 If your organization is ready to move from static planning to continuous, intelligent decision-making, Nexplan partners with you from strategy to execution.
                             </p>
 
                             <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 pt-4">
                                 <a
                                     href="mailto:connect@nexplan.ai"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all shadow-sm justify-center group"
                                 >
-                                    <Mail className="w-5 h-5 text-purple-600" />
-                                    <span className="text-sm font-medium text-gray-700">connect@nexplan.ai</span>
+                                    <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
+                                    <span className="text-sm font-medium">connect@nexplan.ai</span>
                                 </a>
 
                                 <a
                                     href="tel:+971547912051"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all shadow-sm justify-center group"
                                 >
-                                    <Phone className="w-5 h-5 text-purple-600" />
-                                    <span className="text-sm font-medium text-gray-700">+971 547912051</span>
+                                    <Phone className="w-5 h-5 group-hover:text-primary transition-colors" />
+                                    <span className="text-sm font-medium">+971 547912051</span>
                                 </a>
 
                                 <a
                                     href="https://www.nexplan.ai"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 transition-all shadow-sm hover:shadow-md justify-center"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all shadow-sm justify-center group"
                                 >
-                                    <Globe className="w-5 h-5 text-purple-600" />
-                                    <span className="text-sm font-medium text-gray-700">www.nexplan.ai</span>
+                                    <Globe className="w-5 h-5 group-hover:text-primary transition-colors" />
+                                    <span className="text-sm font-medium">www.nexplan.ai</span>
                                 </a>
                             </div>
 
                             <div className="pt-8">
                                 <a
                                     href="mailto:connect@nexplan.ai"
-                                    className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                                    className="inline-flex items-center gap-2 px-10 py-4 bg-white text-primary hover:bg-gray-100 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                                 >
                                     Let’s Build Your Planning Intelligence
                                     <ArrowRight className="w-5 h-5" />
@@ -454,37 +441,37 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className="border-t-2 border-gray-200 py-12 px-4 bg-white">
+            <footer className="border-t border-gray-200 py-12 px-4 bg-gray-50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center space-y-8">
                         <div>
                             <p className="text-xl font-semibold text-gray-900 mb-2">
-                                <span className="text-gradient">Nexplan</span>: Intelligent Planning for Decision-Driven Enterprises.
+                                <span className="text-primary font-bold">Nexplan</span>: Intelligent Planning for Decision-Driven Enterprises.
                             </p>
-                            <p className="text-sm text-purple-600 font-medium tracking-wide border-t border-gray-100 inline-block pt-2">
-                                PLANNING REIMAGINED
+                            <p className="text-xs text-primary/80 font-bold tracking-[0.2em] border-t border-gray-200 inline-block pt-3 uppercase">
+                                Planning Reimagined
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-700">
-                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> USA</span>
-                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> UAE</span>
-                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> UK</span>
-                            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-purple-600"></span> India</span>
+                        <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600">
+                            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> USA</span>
+                            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> UAE</span>
+                            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> UK</span>
+                            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary"></div> India</span>
                         </div>
 
-                        <div className="flex justify-center gap-4 text-sm text-gray-600">
-                            <a href="mailto:info@nexplan.ai" className="hover:text-purple-600 transition-colors">
+                        <div className="flex justify-center gap-6 text-sm text-gray-500">
+                            <a href="mailto:info@nexplan.ai" className="hover:text-primary transition-colors">
                                 info@nexplan.ai
                             </a>
                             <span className="text-gray-300">|</span>
-                            <a href="https://www.nexplan.ai" className="hover:text-purple-600 transition-colors">
+                            <a href="https://www.nexplan.ai" className="hover:text-primary transition-colors">
                                 www.nexplan.ai
                             </a>
                         </div>
 
-                        <div className="pt-6 border-t border-gray-200">
-                            <p className="text-xs text-gray-500">
+                        <div className="pt-8 border-t border-gray-200">
+                            <p className="text-xs text-gray-400">
                                 © {new Date().getFullYear()} Nexplan. All rights reserved.
                             </p>
                         </div>
