@@ -453,7 +453,7 @@ export default function Home() {
                                     <div className="text-center space-y-3">
                                         <div className="text-lg font-bold">Let's Start the Conversation</div>
                                         <p className="text-sm text-white/80 leading-relaxed">
-                                            We respond within 24 hours and partner with you from strategy to execution.
+                                            Your trusted partner in transforming planning into strategic intelligence.
                                         </p>
                                     </div>
                                 </div>
