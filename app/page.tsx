@@ -79,7 +79,7 @@ export default function Home() {
             </section>
 
             {/* Philosophy Section */}
-            <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -110,7 +110,7 @@ export default function Home() {
                                 Planning today is a leadership function, not just a finance process. We work with CFOs, COOs, CHROs, and strategy teams to create a shared decision intelligence layer across the enterprise.
                             </p>
 
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                            <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
                                 {[
                                     { title: "Foresight", desc: "Over hindsight" },
                                     { title: "Signals", desc: "Over static assumptions" },
@@ -118,7 +118,7 @@ export default function Home() {
                                     { title: "Business-Owned Models", desc: "Over IT-owned systems" },
                                     { title: "Ready for AI", desc: "Enabled capabilities" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 rounded-xl text-center border border-gray-100 hover:border-primary/30 transition-colors">
+                                    <div key={i} className="bg-white p-6 rounded-xl text-center border border-gray-100 hover:border-primary/30 transition-colors min-w-[200px]">
                                         <div className="font-bold text-gray-900 text-base md:text-lg mb-2">{item.title}</div>
                                         <div className="text-primary/70 text-sm font-medium uppercase tracking-wide">{item.desc}</div>
                                     </div>
@@ -197,7 +197,7 @@ export default function Home() {
                         <p className="text-gray-600 text-base md:text-lg">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 fade-in-up">
+                    <div className="grid sm:grid-cols-2 gap-4 md:gap-6 fade-in-up">
                         {[
                             { title: "Aerospace & Aviation", desc: "Planning for operations, capacity, and strategic growth", icon: Rocket },
                             { title: "Telecommunications", desc: "Forecasting, revenue planning, and network optimization", icon: Zap },
@@ -281,7 +281,7 @@ export default function Home() {
                             }
                         ].map((useCase, i) => (
                             <div key={i} className="fade-in-up bg-white p-6 md:p-8 rounded-2xl border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all">
-                                <h3 className="text-lg md:text-xl font-bold mb-6 text-primary pb-4 border-b border-gray-100">{useCase.title}</h3>
+                                <h3 className="text-lg md:text-xl font-bold mb-6 text-primary pb-4 border-b border-gray-100 whitespace-nowrap overflow-hidden text-ellipsis">{useCase.title}</h3>
                                 <ul className="space-y-3">
                                     {useCase.items.map((item, j) => (
                                         <li key={j} className="text-sm text-gray-600 flex items-start gap-3">
@@ -339,39 +339,123 @@ export default function Home() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary text-white">
-                <div className="max-w-4xl mx-auto">
-                    <div className="fade-in-up text-center space-y-8">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-                            Get In <span className="opacity-80">Touch</span>
+            <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="fade-in-up text-center space-y-6 mb-12">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                            Get In <span className="text-primary">Touch</span>
                         </h2>
 
-                        <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                             If your organization is ready to move from static planning to continuous, intelligent decision-making, Nexplan partners with you from strategy to execution.
                         </p>
+                    </div>
 
-                        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 pt-4">
-                            <a href="mailto:connect@nexplan.ai" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all text-sm md:text-base">
-                                <Mail className="w-5 h-5" />
-                                <span className="font-medium">connect@nexplan.ai</span>
-                            </a>
-
-                            <a href="tel:+971547912051" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all text-sm md:text-base">
-                                <Phone className="w-5 h-5" />
-                                <span className="font-medium">+971 547912051</span>
-                            </a>
-
-                            <a href="https://www.nexplan.ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white hover:text-primary transition-all text-sm md:text-base">
-                                <Globe className="w-5 h-5" />
-                                <span className="font-medium">www.nexplan.ai</span>
-                            </a>
+                    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+                        {/* Contact Form */}
+                        <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
+                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+                            <form className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                    <input
+                                        type="text"
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="John Doe"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="john@company.com"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="+1 (555) 000-0000"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="Your Company"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                                    <textarea
+                                        required
+                                        rows={4}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                                        placeholder="Tell us about your planning needs..."
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="submit"
+                                    className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-all hover:shadow-lg font-semibold text-base md:text-lg"
+                                >
+                                    Send Message
+                                </button>
+                            </form>
                         </div>
 
-                        <div className="pt-8">
-                            <a href="mailto:connect@nexplan.ai" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary hover:bg-gray-100 rounded-lg font-bold transition-all hover:shadow-xl hover:scale-105 text-base md:text-lg">
-                                Let's Build Your Planning Intelligence
-                                <ArrowRight className="w-5 h-5" />
-                            </a>
+                        {/* Contact Information */}
+                        <div className="space-y-8">
+                            <div className="bg-primary text-white p-6 md:p-8 rounded-2xl">
+                                <h3 className="text-xl md:text-2xl font-bold mb-6">Contact Information</h3>
+                                <div className="space-y-4">
+                                    <a href="mailto:connect@nexplan.ai" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                            <Mail className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <div className="text-sm text-white/70 mb-1">Email</div>
+                                            <div className="font-semibold">connect@nexplan.ai</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="tel:+971547912051" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                            <Phone className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <div className="text-sm text-white/70 mb-1">Phone</div>
+                                            <div className="font-semibold">+971 547912051</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="https://www.nexplan.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                            <Globe className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <div className="text-sm text-white/70 mb-1">Website</div>
+                                            <div className="font-semibold">www.nexplan.ai</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
+                                <h3 className="text-lg font-bold text-gray-900 mb-4">Global Presence</h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {['USA', 'UAE', 'UK', 'India'].map((location, i) => (
+                                        <div key={i} className="flex items-center gap-2 text-gray-700">
+                                            <div className="w-2 h-2 rounded-full bg-primary"></div>
+                                            <span className="text-sm font-medium">{location}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
