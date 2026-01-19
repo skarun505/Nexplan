@@ -339,108 +339,125 @@ export default function Home() {
 
             {/* Contact Section */}
             <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-                <div className="max-w-5xl mx-auto">
-                    <div className="fade-in-up text-center space-y-6 mb-12">
+                <div className="max-w-6xl mx-auto">
+                    <div className="fade-in-up text-center space-y-4 mb-16">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                             Get In <span className="text-primary">Touch</span>
                         </h2>
 
-                        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
                             If your organization is ready to move from static planning to continuous, intelligent decision-making, Nexplan partners with you from strategy to execution.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-                        {/* Contact Form */}
-                        <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
-                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
-                            <form className="space-y-4">
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                                    <input
-                                        type="text"
-                                        required
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                        placeholder="John Doe"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                    <input
-                                        type="email"
-                                        required
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                        placeholder="john@company.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                    <input
-                                        type="tel"
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                        placeholder="+1 (555) 000-0000"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
-                                    <input
-                                        type="text"
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                        placeholder="Your Company"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                                    <textarea
-                                        required
-                                        rows={4}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                                        placeholder="Tell us about your planning needs..."
-                                    ></textarea>
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-all hover:shadow-lg font-semibold text-base md:text-lg"
-                                >
-                                    Send Message
-                                </button>
-                            </form>
+                    <div className="grid lg:grid-cols-5 gap-8">
+                        {/* Contact Form - Takes 3 columns */}
+                        <div className="lg:col-span-3">
+                            <div className="bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-200 h-full">
+                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Send us a message</h3>
+                                <form className="space-y-5">
+                                    <div className="grid sm:grid-cols-2 gap-5">
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                            <input
+                                                type="text"
+                                                required
+                                                className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
+                                                placeholder="John Doe"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                                            <input
+                                                type="email"
+                                                required
+                                                className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
+                                                placeholder="john@company.com"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid sm:grid-cols-2 gap-5">
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                                            <input
+                                                type="tel"
+                                                className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
+                                                placeholder="+1 (555) 000-0000"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-2">Company Name</label>
+                                            <input
+                                                type="text"
+                                                className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
+                                                placeholder="Your Company"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                                        <textarea
+                                            required
+                                            rows={5}
+                                            className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none bg-white"
+                                            placeholder="Tell us about your planning needs..."
+                                        ></textarea>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-all hover:shadow-lg font-bold text-base md:text-lg"
+                                    >
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
                         </div>
 
-                        {/* Contact Information */}
-                        <div className="space-y-8">
-                            <div className="bg-primary text-white p-6 md:p-8 rounded-2xl">
-                                <h3 className="text-xl md:text-2xl font-bold mb-6">Contact Information</h3>
-                                <div className="space-y-4">
-                                    <a href="mailto:connect@nexplan.ai" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                        {/* Contact Information - Takes 2 columns */}
+                        <div className="lg:col-span-2">
+                            <div className="bg-primary text-white p-8 md:p-10 rounded-2xl h-full flex flex-col justify-center">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Contact Information</h3>
+                                <div className="space-y-6">
+                                    <a href="mailto:connect@nexplan.ai" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mt-1">
                                             <Mail className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <div className="text-sm text-white/70 mb-1">Email</div>
-                                            <div className="font-semibold">connect@nexplan.ai</div>
+                                            <div className="text-sm text-white/70 mb-1.5 font-medium">Email</div>
+                                            <div className="font-bold text-base">connect@nexplan.ai</div>
                                         </div>
                                     </a>
 
-                                    <a href="tel:+971547912051" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                    <a href="tel:+971547912051" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mt-1">
                                             <Phone className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <div className="text-sm text-white/70 mb-1">Phone</div>
-                                            <div className="font-semibold">+971 547912051</div>
+                                            <div className="text-sm text-white/70 mb-1.5 font-medium">Phone</div>
+                                            <div className="font-bold text-base">+971 547912051</div>
                                         </div>
                                     </a>
 
-                                    <a href="https://www.nexplan.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all group">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                    <a href="https://www.nexplan.ai" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mt-1">
                                             <Globe className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <div className="text-sm text-white/70 mb-1">Website</div>
-                                            <div className="font-semibold">www.nexplan.ai</div>
+                                            <div className="text-sm text-white/70 mb-1.5 font-medium">Website</div>
+                                            <div className="font-bold text-base">www.nexplan.ai</div>
                                         </div>
                                     </a>
+                                </div>
+
+                                <div className="mt-8 pt-8 border-t border-white/20">
+                                    <div className="text-center">
+                                        <div className="text-sm text-white/70 mb-3 font-medium">Global Presence</div>
+                                        <div className="flex flex-wrap justify-center gap-4">
+                                            {['USA', 'UAE', 'UK', 'India'].map((location, i) => (
+                                                <span key={i} className="text-sm font-semibold">{location}</span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
