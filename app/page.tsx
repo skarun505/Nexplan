@@ -48,11 +48,6 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Column - Content */}
                         <div className="space-y-6">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-                                <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                                <span className="text-xs font-bold text-primary uppercase tracking-wider">Next-Gen Planning</span>
-                            </div>
-
                             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
                                 <span className="block mt-2 text-primary">Enterprise Intelligence</span>
