@@ -40,39 +40,42 @@ export default function Home() {
             </header>
 
             {/* Hero Section - Clean & Professional */}
-            <section className="pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center space-y-8 md:space-y-10">
-                        {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10">
-                            <Sparkles className="w-4 h-4 text-primary" />
-                            <span className="text-sm font-semibold text-primary uppercase tracking-wide">Enterprise Intelligence Platform</span>
+            <section className="pt-32 pb-24 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+                {/* Background Patterns */}
+                <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
+
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="text-center space-y-8 md:space-y-12">
+                        {/* Premium Badge */}
+                        <div className="fade-in-up inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-default">
+                            <Sparkles className="w-4 h-4 text-primary fill-primary/20" />
+                            <span className="text-xs md:text-sm font-bold text-gray-800 uppercase tracking-widest">Enterprise Intelligence Platform</span>
                         </div>
 
-                        {/* Main Headline */}
-                        <div className="space-y-4">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+                        {/* Main Headline with new Font */}
+                        <div className="space-y-6 fade-in-up" style={{ animationDelay: '0.1s' }}>
+                            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] tracking-tight text-gray-900">
                                 <span className="block sm:inline">Reimagining Planning as</span>
                                 <br className="hidden sm:block" />
-                                <span className="block text-primary mt-2 sm:mt-0">Enterprise Intelligence</span>
+                                <span className="block text-primary mt-2 sm:mt-4">Enterprise Intelligence</span>
                             </h1>
                         </div>
 
                         {/* Sub-headline */}
-                        <div className="max-w-3xl mx-auto space-y-4">
-                            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                                Nexplan transforms enterprise planning into a decision intelligence layer connecting strategy, finance, operations, and workforce across the enterprise.
-                            </p>
-                            <p className="text-base md:text-lg text-gray-600">
-                                From static budgets to continuous foresight, we partner with leadership teams to build planning ecosystems that drive smarter, faster, and more confident decisions.
+                        <div className="max-w-3xl mx-auto space-y-6 fade-in-up" style={{ animationDelay: '0.2s' }}>
+                            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium">
+                                Nexplan transforms enterprise planning into a <span className="text-gray-900 font-semibold">decision intelligence layer</span> connecting strategy, finance, operations, and workforce.
                             </p>
                         </div>
 
-                        {/* CTA */}
-                        <div className="pt-4">
-                            <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-all duration-300 hover:shadow-xl hover:scale-105 text-base md:text-lg font-semibold">
+                        {/* Premium CTA Buttons */}
+                        <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <a href="#contact" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white rounded-xl hover:bg-[#2a1645] transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1 text-base md:text-lg font-bold min-w-[200px]">
                                 Start the Conversation
                                 <ArrowRight className="w-5 h-5" />
+                            </a>
+                            <a href="#expertise" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 text-base md:text-lg font-bold min-w-[200px]">
+                                Explore Expertise
                             </a>
                         </div>
                     </div>
@@ -80,38 +83,42 @@ export default function Home() {
             </section>
 
             {/* Philosophy Section */}
-            <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                            From Static Cycles to <span className="text-primary">Intelligence</span>
+            <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+                {/* Subtle background decoration */}
+                <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+
+                <div className="max-w-5xl mx-auto relative z-10">
+                    <div className="text-center mb-16 md:mb-24 fade-in-up">
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Philosophy</span>
+                        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                            From Static Cycles to <br className="hidden md:block" />
+                            <span className="text-primary bg-primary/5 px-2 rounded-lg">Real-Time Intelligence</span>
                         </h2>
-                        <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-6"></div>
+                        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8"></div>
                     </div>
 
-                    <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed fade-in-up">
-                        <p className="text-center">
-                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-semibold">sense change</span>, learn from data, and guide leadership decisions continuously.
+                    <div className="space-y-8 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up max-w-4xl mx-auto text-center font-medium">
+                        <p>
+                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-bold">sense change</span>, learn from data, and guide leadership decisions continuously.
                         </p>
-                        <p className="text-center">
+                        <p>
                             Nexplan was founded to help organizations move beyond traditional planning into intelligent, adaptive decision systems. We focus on strategy, foresight, and actionable intelligence — not repeating old models.
                         </p>
-                        <p className="font-semibold text-gray-900 text-center">
-                            At Nexplan, we help organizations rethink planning as intelligence in motion. We don't just create better plans — we enable better decisions at leadership speed.
-                        </p>
                     </div>
 
-                    {/* Leadership Capability Box */}
-                    <div className="mt-16 md:mt-20 fade-in-up">
-                        <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-900">
+                    {/* Leadership Capability Box - Premium Card Style */}
+                    <div className="mt-20 md:mt-28 fade-in-up">
+                        <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-14 border border-gray-100 shadow-2xl shadow-gray-200/50 relative overflow-hidden group">
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-purple-400"></div>
+
+                            <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-center text-gray-900">
                                 Planning as a <span className="text-primary">Leadership Capability</span>
                             </h3>
-                            <p className="text-center text-base md:text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
-                                Planning today is a leadership function, not just a finance process. We work with CFOs, COOs, CHROs, and strategy teams to create a shared decision intelligence layer across the enterprise.
+                            <p className="text-center text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                                Planning today is a leadership function, not just a finance process. We create a shared decision intelligence layer across the enterprise.
                             </p>
 
-                            <div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+                            <div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 md:gap-8 max-w-5xl mx-auto">
                                 {[
                                     { title: "Foresight", desc: "Over hindsight" },
                                     { title: "Signals", desc: "Over static assumptions" },
@@ -119,9 +126,9 @@ export default function Home() {
                                     { title: "Business-Owned Models", desc: "Over IT-owned systems" },
                                     { title: "Ready for AI", desc: "Enabled capabilities" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-4 md:p-6 rounded-xl text-center border border-gray-100 hover:border-primary/30 transition-colors lg:min-w-[200px]">
-                                        <div className="font-bold text-gray-900 text-sm md:text-base lg:text-lg mb-2">{item.title}</div>
-                                        <div className="text-primary/70 text-xs md:text-sm font-medium uppercase tracking-wide">{item.desc}</div>
+                                    <div key={i} className="bg-white p-6 md:p-8 rounded-2xl text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:min-w-[220px] group/card">
+                                        <div className="font-heading font-bold text-gray-900 text-base md:text-lg lg:text-xl mb-3 group-hover/card:text-primary transition-colors">{item.title}</div>
+                                        <div className="text-gray-500 text-xs md:text-sm font-bold uppercase tracking-widest">{item.desc}</div>
                                     </div>
                                 ))}
                             </div>
@@ -131,18 +138,19 @@ export default function Home() {
             </section>
 
             {/* Our Approach */}
-            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+                    <div className="text-center mb-16 md:mb-24 fade-in-up">
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Methodology</span>
+                        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
                             Our Approach to <span className="text-primary">Intelligent Planning</span>
                         </h2>
-                        <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mt-4">
-                            Four strategic pillars for continuous enterprise intelligence
+                        <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mt-6">
+                            Four strategic pillars building your enterprise brain
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-10">
                         {[
                             {
                                 num: "01",
@@ -153,7 +161,7 @@ export default function Home() {
                             {
                                 num: "02",
                                 title: "Intelligent Platform Implementation",
-                                desc: "We design and implement modern planning platforms such as Anaplan and Pigment, integrating data, models, and workflows to create a single source of truth for enterprise decisions.",
+                                desc: "We design and implement modern planning platforms such as Anaplan and Pigment, integrating data, models, and workflows to create a single source of truth.",
                                 icon: Brain
                             },
                             {
@@ -169,17 +177,17 @@ export default function Home() {
                                 icon: TrendingUp
                             }
                         ].map((item, i) => (
-                            <div key={i} className="fade-in-up bg-white p-6 md:p-8 rounded-2xl border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all">
-                                <div className="flex items-start gap-4 md:gap-6">
+                            <div key={i} className="fade-in-up bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 group">
+                                <div className="flex items-start gap-6 md:gap-8">
                                     <div className="flex-shrink-0">
-                                        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary/5 flex items-center justify-center group-hover:bg-primary transition-colors">
-                                            <item.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
+                                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-slate-50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                                            <item.icon className="w-8 h-8 md:w-10 md:h-10 text-primary group-hover:text-white transition-colors" />
                                         </div>
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <div className="text-5xl md:text-6xl font-bold text-gray-100 mb-2">{item.num}</div>
-                                        <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.desc}</p>
+                                        <div className="text-4xl md:text-5xl font-extrabold text-gray-100 mb-3 group-hover:text-primary/10 transition-colors">{item.num}</div>
+                                        <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4 text-gray-900">{item.title}</h3>
+                                        <p className="text-base md:text-lg text-gray-600 leading-relaxed border-l-2 border-transparent pl-0 group-hover:border-primary/30 group-hover:pl-4 transition-all duration-300">{item.desc}</p>
                                     </div>
                                 </div>
                             </div>

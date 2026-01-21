@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,9 +7,14 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+});
+
 export const metadata: Metadata = {
   title: "Nexplan | Intelligent Planning for Decision-Driven Enterprises",
-  description: "Reimagining Planning as Enterprise Intelligence. Transform enterprise planning into a decision intelligence layer connecting strategy, finance, operations, and workforce.",
+  description: "Reimagining Planning as Enterprise Intelligence.",
 };
 
 export default function RootLayout({
@@ -18,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${jakarta.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

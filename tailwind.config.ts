@@ -14,7 +14,15 @@ export default {
                 primary: {
                     DEFAULT: '#3A1F5C',
                     foreground: '#ffffff',
+                },
+                secondary: {
+                    DEFAULT: '#1a1025', // Darker shade for contrast
+                    foreground: '#ffffff',
                 }
+            },
+            fontFamily: {
+                sans: ["var(--font-inter)"],
+                heading: ["var(--font-jakarta)"],
             }
         },
     },
