@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 md:h-20">
                         <img src="/header-logo.png" alt="Nexplan" className="h-8 md:h-10 w-auto" />
-                        <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-colors text-sm md:text-base font-medium">
+                        <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#3b06a3] transition-colors text-sm md:text-base font-medium">
                             Get in Touch
                         </a>
                     </div>
@@ -70,7 +70,7 @@ export default function Home() {
 
                         {/* Premium CTA Buttons */}
                         <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <a href="#contact" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white rounded-xl hover:bg-[#2a1645] transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1 text-base md:text-lg font-bold min-w-[200px]">
+                            <a href="#contact" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white rounded-xl hover:bg-[#3b06a3] transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1 text-base md:text-lg font-bold min-w-[200px]">
                                 Start the Conversation
                                 <ArrowRight className="w-5 h-5" />
                             </a>
@@ -414,7 +414,7 @@ export default function Home() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#2a1645] transition-all hover:shadow-lg font-bold text-base md:text-lg"
+                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#3b06a3] transition-all hover:shadow-lg font-bold text-base md:text-lg"
                                     >
                                         Send Message
                                     </button>
