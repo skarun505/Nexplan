@@ -48,13 +48,13 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Column - Content */}
                         <div className="space-y-6">
-                            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
                                 <span className="block mt-2 text-primary">Enterprise Intelligence</span>
                             </h1>
 
-                            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
-                                Transform enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span> that connects strategy, finance, operations, and workforce in real-time.
+                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xl">
+                                Transform enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span> that connects strategy, finance, operations, and workforce.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -142,12 +142,12 @@ export default function Home() {
                         <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8"></div>
                     </div>
 
-                    <div className="space-y-8 text-lg md:text-xl text-gray-600 leading-relaxed fade-in-up max-w-4xl mx-auto text-center font-medium">
+                    <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed fade-in-up max-w-3xl mx-auto text-center">
                         <p>
-                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-bold">sense change</span>, learn from data, and guide leadership decisions continuously.
+                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-semibold">sense change</span>, learn from data, and guide leadership decisions continuously.
                         </p>
                         <p>
-                            Nexplan was founded to help organizations move beyond traditional planning into intelligent, adaptive decision systems. We focus on strategy, foresight, and actionable intelligence — not repeating old models.
+                            Nexplan helps organizations move beyond traditional planning into intelligent, adaptive decision systems focused on strategy, foresight, and actionable intelligence.
                         </p>
                     </div>
 
@@ -156,10 +156,10 @@ export default function Home() {
                         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-14 border border-gray-100 shadow-2xl shadow-gray-200/50 relative overflow-hidden group">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
 
-                            <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-center text-gray-900">
+                            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-center text-gray-900">
                                 Planning as a <span className="text-primary">Leadership Capability</span>
                             </h3>
-                            <p className="text-center text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                            <p className="text-center text-base md:text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                                 Planning today is a leadership function, not just a finance process. We create a shared decision intelligence layer across the enterprise.
                             </p>
 
@@ -186,12 +186,12 @@ export default function Home() {
             <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16 md:mb-24 fade-in-up">
-                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Methodology</span>
-                        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+                        <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Methodology</span>
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900">
                             Our Approach to <span className="text-primary">Intelligent Planning</span>
                         </h2>
-                        <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mt-6">
-                            Four strategic pillars building your enterprise brain
+                        <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mt-5">
+                            Four strategic pillars for continuous enterprise intelligence
                         </p>
                     </div>
 
@@ -230,9 +230,9 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <div className="text-4xl md:text-5xl font-extrabold text-gray-100 mb-3 group-hover:text-primary/10 transition-colors">{item.num}</div>
-                                        <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4 text-gray-900">{item.title}</h3>
-                                        <p className="text-base md:text-lg text-gray-600 leading-relaxed border-l-2 border-transparent pl-0 group-hover:border-primary/30 group-hover:pl-4 transition-all duration-300">{item.desc}</p>
+                                        <div className="text-3xl md:text-4xl font-bold text-gray-100 mb-2 group-hover:text-primary/10 transition-colors">{item.num}</div>
+                                        <h3 className="font-heading text-xl md:text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
+                                        <p className="text-sm md:text-base text-gray-600 leading-relaxed border-l-2 border-transparent pl-0 group-hover:border-primary/30 group-hover:pl-4 transition-all duration-300">{item.desc}</p>
                                     </div>
                                 </div>
                             </div>
@@ -245,10 +245,10 @@ export default function Home() {
             <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-gray-900">
                             Enterprise Expertise <span className="text-primary">Across Sectors</span>
                         </h2>
-                        <p className="text-gray-600 text-base md:text-lg">Planning for operations, capacity, and strategic growth across industries</p>
+                        <p className="text-gray-600 text-sm md:text-base">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4 md:gap-6 fade-in-up">
