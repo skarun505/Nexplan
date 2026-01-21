@@ -39,44 +39,67 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Hero Section - Clean & Professional */}
-            <section className="pt-32 pb-24 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-                {/* Background Patterns */}
-                <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
+            {/* Hero Section - Modern Minimalist */}
+            <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                {/* Subtle gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-purple-50/30 to-white"></div>
 
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="text-center space-y-8 md:space-y-12">
-                        {/* Premium Badge */}
-                        <div className="fade-in-up inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-default">
-                            <Sparkles className="w-4 h-4 text-primary fill-primary/20" />
-                            <span className="text-xs md:text-sm font-bold text-gray-800 uppercase tracking-widest">Enterprise Intelligence Platform</span>
-                        </div>
+                {/* Animated gradient orbs */}
+                <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-                        {/* Main Headline with new Font */}
-                        <div className="space-y-6 fade-in-up" style={{ animationDelay: '0.1s' }}>
-                            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] tracking-tight text-gray-900">
-                                <span className="block sm:inline">Reimagining Planning as</span>
-                                <br className="hidden sm:block" />
-                                <span className="block text-primary mt-2 sm:mt-4">Enterprise Intelligence</span>
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="text-center space-y-8">
+
+                        {/* Main Headline - Reduced Size */}
+                        <div className="space-y-4 fade-in-up">
+                            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900">
+                                Reimagining Planning as
+                                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
+                                    Enterprise Intelligence
+                                </span>
                             </h1>
                         </div>
 
-                        {/* Sub-headline */}
-                        <div className="max-w-3xl mx-auto space-y-6 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium">
-                                Nexplan transforms enterprise planning into a <span className="text-gray-900 font-semibold">decision intelligence layer</span> connecting strategy, finance, operations, and workforce.
+                        {/* Sub-headline - More Compact */}
+                        <div className="max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.1s' }}>
+                            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                                Transform enterprise planning into a <span className="text-gray-900 font-semibold">decision intelligence layer</span> connecting strategy, finance, operations, and workforce.
                             </p>
                         </div>
 
-                        {/* Premium CTA Buttons */}
-                        <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <a href="#contact" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white rounded-xl hover:bg-[#3b06a3] transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1 text-base md:text-lg font-bold min-w-[200px]">
+                        {/* Clean CTA Section */}
+                        <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.2s' }}>
+                            <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white rounded-xl hover:bg-[#3b06a3] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 text-base font-semibold">
                                 Start the Conversation
-                                <ArrowRight className="w-5 h-5" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a href="#expertise" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:border-gray-300 text-base md:text-lg font-bold min-w-[200px]">
-                                Explore Expertise
+                            <a href="#expertise" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-gray-700 border-2 border-gray-200 rounded-xl hover:border-primary/30 hover:bg-gray-50 transition-all duration-300 text-base font-semibold">
+                                Our Expertise
                             </a>
+                        </div>
+
+                        {/* Trust Indicators - Subtle */}
+                        <div className="pt-12 fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <p className="text-sm text-gray-500 mb-4 font-medium">Trusted by enterprise leaders across</p>
+                            <div className="flex flex-wrap justify-center gap-6 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                                <span className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                    USA
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                    UAE
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                    UK
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                    India
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
