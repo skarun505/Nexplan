@@ -1,10 +1,12 @@
 'use client'
 
-import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building, Check } from 'lucide-react'
+import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building, Check, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0)
+    const [clientsCount, setClientsCount] = useState(0)
+    const [industriesCount, setIndustriesCount] = useState(0)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,13 +27,41 @@ export default function Home() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    // Counter animation effect
+    useEffect(() => {
+        const duration = 2000 // 2 seconds
+        const clientsTarget = 50
+        const industriesTarget = 10
+        const frameRate = 60
+        const totalFrames = (duration / 1000) * frameRate
+
+        let frame = 0
+        const counter = setInterval(() => {
+            frame++
+            const progress = frame / totalFrames
+
+            setClientsCount(Math.floor(progress * clientsTarget))
+            setIndustriesCount(Math.floor(progress * industriesTarget))
+
+            if (frame >= totalFrames) {
+                setClientsCount(clientsTarget)
+                setIndustriesCount(industriesTarget)
+                clearInterval(counter)
+            }
+        }, 1000 / frameRate)
+
+        return () => clearInterval(counter)
+    }, [])
+
     return (
         <div className="min-h-screen bg-white text-gray-900">
             {/* Simple Fixed Header */}
             <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b transition-all duration-300 ${scrollY > 50 ? 'shadow-md' : 'border-gray-100'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 md:h-20">
-                        <img src="/header-logo.png" alt="Nexplan" className="h-8 md:h-10 w-auto" />
+                        <a href="/" className="flex items-center">
+                            <img src="/nexplan-logo.png" alt="Nexplan" className="h-8 md:h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                        </a>
                         <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-sm md:text-base font-medium">
                             Get in Touch
                         </a>
@@ -40,24 +70,24 @@ export default function Home() {
             </header>
 
             {/* Hero Section - Compact Professional Design */}
-            <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
+            <section className="relative pt-20 pb-8 md:pt-24 md:pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
                 {/* Subtle background decoration */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Column - Content */}
-                        <div className="space-y-6">
+                        <div className="space-y-6 text-center lg:text-left">
                             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
                                 <span className="block mt-2 text-primary">Enterprise Intelligence</span>
                             </h1>
 
-                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xl">
+                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Transform enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span> that connects strategy, finance, operations, and workforce.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
                                 <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-sm font-semibold">
                                     Get Started
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -90,11 +120,11 @@ export default function Home() {
                                         {/* Stats Cards */}
                                         <div className="grid grid-cols-2 gap-4">
                                             <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                                <div className="text-2xl font-bold text-primary mb-1">50+</div>
+                                                <div className="text-2xl font-bold text-primary mb-1">{clientsCount}+</div>
                                                 <div className="text-xs text-gray-600">Enterprise Clients</div>
                                             </div>
                                             <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                                <div className="text-2xl font-bold text-primary mb-1">10+</div>
+                                                <div className="text-2xl font-bold text-primary mb-1">{industriesCount}+</div>
                                                 <div className="text-xs text-gray-600">Industries Served</div>
                                             </div>
                                         </div>
@@ -128,12 +158,12 @@ export default function Home() {
             </section>
 
             {/* Philosophy Section */}
-            <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+            <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
                 {/* Subtle background decoration */}
                 <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] -mr-32 -mt-32"></div>
 
                 <div className="max-w-5xl mx-auto relative z-10">
-                    <div className="text-center mb-16 md:mb-24 fade-in-up">
+                    <div className="text-center mb-10 md:mb-14 fade-in-up">
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Philosophy</span>
                         <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
                             From Static Cycles to <br className="hidden md:block" />
@@ -152,7 +182,7 @@ export default function Home() {
                     </div>
 
                     {/* Leadership Capability Box - Premium Card Style */}
-                    <div className="mt-20 md:mt-28 fade-in-up">
+                    <div className="mt-12 md:mt-16 fade-in-up">
                         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-14 border border-gray-100 shadow-2xl shadow-gray-200/50 relative overflow-hidden group">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
 
@@ -183,7 +213,7 @@ export default function Home() {
             </section>
 
             {/* Our Approach */}
-            <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16 md:mb-24 fade-in-up">
                         <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Methodology</span>
@@ -350,8 +380,8 @@ export default function Home() {
             </section>
 
             {/* Technology Ecosystem */}
-            <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
-                <div className="max-w-6xl mx-auto text-center mb-12">
+            <section className="py-6 md:py-10 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
+                <div className="max-w-6xl mx-auto text-center mb-6">
                     <div className="fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
                             Our Technology <span className="text-primary">Ecosystem</span>
@@ -365,7 +395,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="fade-in-up relative flex w-full overflow-hidden py-8">
+                <div className="fade-in-up relative flex w-full overflow-hidden py-6">
                     <div className="flex animate-marquee whitespace-nowrap items-center pause-on-hover">
                         {[...Array(3)].map((_, setIndex) => (
                             <div key={`set-${setIndex}`} className="flex">
@@ -392,9 +422,9 @@ export default function Home() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-white">
+            <section id="contact" className="py-6 md:py-10 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="fade-in-up text-center space-y-4 mb-16">
+                    <div className="fade-in-up text-center space-y-4 mb-8">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                             Get In <span className="text-primary">Touch</span>
                         </h2>
@@ -492,15 +522,6 @@ export default function Home() {
                                         </div>
                                     </a>
 
-                                    <a href="https://www.nexplan.ai" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
-                                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mt-1">
-                                            <Globe className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <div className="text-sm text-white/70 mb-1.5 font-medium">Website</div>
-                                            <div className="font-bold text-base">www.nexplan.ai</div>
-                                        </div>
-                                    </a>
                                 </div>
 
                                 <div className="mt-8 pt-8 border-t border-white/20">
@@ -528,29 +549,31 @@ export default function Home() {
                             <p className="text-xs font-bold tracking-[0.2em] text-primary/70 uppercase mt-3">Planning Reimagined</p>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium text-gray-600">
-                            <span className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div> USA
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div> UAE
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div> UK
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div> India
-                            </span>
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-gray-600">
+                            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+                            <span className="text-gray-300">|</span>
+                            <a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a>
+                            <span className="text-gray-300">|</span>
+                            <a href="mailto:info@nexplan.ai" className="hover:text-primary transition-colors">info@nexplan.ai</a>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm text-gray-500">
-                            <a href="mailto:info@nexplan.ai" className="hover:text-primary transition-colors">
-                                info@nexplan.ai
-                            </a>
-                            <span className="hidden sm:inline text-gray-300">|</span>
-                            <a href="https://www.nexplan.ai" className="hover:text-primary transition-colors">
-                                www.nexplan.ai
-                            </a>
+                        {/* Social Media */}
+                        <div className="pt-6">
+                            <p className="text-xs text-gray-500 mb-4">Follow Us</p>
+                            <div className="flex justify-center gap-4">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <Linkedin className="w-4 h-4" />
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <Twitter className="w-4 h-4" />
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <Facebook className="w-4 h-4" />
+                                </a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                    <Instagram className="w-4 h-4" />
+                                </a>
+                            </div>
                         </div>
 
                         <div className="pt-6 border-t border-gray-100">
