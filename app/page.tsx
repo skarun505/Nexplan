@@ -68,9 +68,9 @@ export default function Home() {
                             </div>
 
                             {/* Trust Bar - Compact */}
-                            <div className="pt-6 border-t border-gray-100">
+                            <div className="pt-6 border-t border-gray-100 text-center">
                                 <p className="text-xs text-gray-500 mb-3">Trusted by leaders across</p>
-                                <div className="flex gap-4 text-xs font-semibold text-gray-400">
+                                <div className="flex justify-center gap-4 text-xs font-semibold text-gray-400">
                                     {['USA', 'UAE', 'UK', 'India'].map((loc, i) => (
                                         <span key={i} className="flex items-center gap-1.5">
                                             <div className="w-1 h-1 rounded-full bg-primary"></div>
