@@ -32,7 +32,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 md:h-20">
                         <img src="/header-logo.png" alt="Nexplan" className="h-8 md:h-10 w-auto" />
-                        <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#3b06a3] transition-colors text-sm md:text-base font-medium">
+                        <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-sm md:text-base font-medium">
                             Get in Touch
                         </a>
                     </div>
@@ -42,11 +42,11 @@ export default function Home() {
             {/* Hero Section - Modern Minimalist */}
             <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 {/* Subtle gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white via-purple-50/30 to-white"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-white"></div>
 
                 {/* Animated gradient orbs */}
                 <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="text-center space-y-8">
@@ -55,7 +55,7 @@ export default function Home() {
                         <div className="space-y-4 fade-in-up">
                             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900">
                                 Reimagining Planning as
-                                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
+                                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                                     Enterprise Intelligence
                                 </span>
                             </h1>
@@ -70,7 +70,7 @@ export default function Home() {
 
                         {/* Clean CTA Section */}
                         <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white rounded-xl hover:bg-[#3b06a3] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 text-base font-semibold">
+                            <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white rounded-xl hover:bg-[#0052CC] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 text-base font-semibold">
                                 Start the Conversation
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </a>
@@ -132,7 +132,7 @@ export default function Home() {
                     {/* Leadership Capability Box - Premium Card Style */}
                     <div className="mt-20 md:mt-28 fade-in-up">
                         <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-14 border border-gray-100 shadow-2xl shadow-gray-200/50 relative overflow-hidden group">
-                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-purple-400"></div>
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
 
                             <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-center text-gray-900">
                                 Planning as a <span className="text-primary">Leadership Capability</span>
@@ -437,7 +437,7 @@ export default function Home() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#3b06a3] transition-all hover:shadow-lg font-bold text-base md:text-lg"
+                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all hover:shadow-lg font-bold text-base md:text-lg"
                                     >
                                         Send Message
                                     </button>

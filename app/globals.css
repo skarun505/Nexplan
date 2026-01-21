@@ -10,7 +10,7 @@
 
 @layer utilities {
     .text-primary-color {
-        @apply text-[#570CEF];
+        @apply text-[#0066FF];
     }
 
     .card-hover {
@@ -97,10 +97,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #570CEF;
+    background: #0066FF;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #3b06a3;
+    background: #0052CC;
 }
