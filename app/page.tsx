@@ -39,66 +39,93 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Hero Section - Modern Minimalist */}
-            <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-                {/* Subtle gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-white"></div>
+            {/* Hero Section - Compact Professional Design */}
+            <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
+                {/* Subtle background decoration */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
-                {/* Animated gradient orbs */}
-                <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Column - Content */}
+                        <div className="space-y-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+                                <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                <span className="text-xs font-bold text-primary uppercase tracking-wider">Next-Gen Planning</span>
+                            </div>
 
-                <div className="max-w-6xl mx-auto relative z-10">
-                    <div className="text-center space-y-8">
-
-                        {/* Main Headline - Reduced Size */}
-                        <div className="space-y-4 fade-in-up">
-                            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900">
+                            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
-                                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                    Enterprise Intelligence
-                                </span>
+                                <span className="block mt-2 text-primary">Enterprise Intelligence</span>
                             </h1>
-                        </div>
 
-                        {/* Sub-headline - More Compact */}
-                        <div className="max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.1s' }}>
-                            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                                Transform enterprise planning into a <span className="text-gray-900 font-semibold">decision intelligence layer</span> connecting strategy, finance, operations, and workforce.
+                            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
+                                Transform enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span> that connects strategy, finance, operations, and workforce in real-time.
                             </p>
+
+                            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                                <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-sm font-semibold">
+                                    Get Started
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </a>
+                                <a href="#expertise" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 border border-gray-200 rounded-lg hover:border-primary/30 hover:bg-gray-50 transition-all text-sm font-semibold">
+                                    View Our Work
+                                </a>
+                            </div>
+
+                            {/* Trust Bar - Compact */}
+                            <div className="pt-6 border-t border-gray-100">
+                                <p className="text-xs text-gray-500 mb-3">Trusted by leaders across</p>
+                                <div className="flex gap-4 text-xs font-semibold text-gray-400">
+                                    {['USA', 'UAE', 'UK', 'India'].map((loc, i) => (
+                                        <span key={i} className="flex items-center gap-1.5">
+                                            <div className="w-1 h-1 rounded-full bg-primary"></div>
+                                            {loc}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Clean CTA Section */}
-                        <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-white rounded-xl hover:bg-[#0052CC] transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 text-base font-semibold">
-                                Start the Conversation
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a href="#expertise" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-gray-700 border-2 border-gray-200 rounded-xl hover:border-primary/30 hover:bg-gray-50 transition-all duration-300 text-base font-semibold">
-                                Our Expertise
-                            </a>
-                        </div>
+                        {/* Right Column - Visual Element */}
+                        <div className="relative hidden lg:block">
+                            <div className="relative">
+                                {/* Abstract visual representation */}
+                                <div className="bg-gradient-to-br from-primary/10 to-blue-100/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-100">
+                                    <div className="space-y-4">
+                                        {/* Stats Cards */}
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                                                <div className="text-2xl font-bold text-primary mb-1">50+</div>
+                                                <div className="text-xs text-gray-600">Enterprise Clients</div>
+                                            </div>
+                                            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                                                <div className="text-2xl font-bold text-primary mb-1">10+</div>
+                                                <div className="text-xs text-gray-600">Industries Served</div>
+                                            </div>
+                                        </div>
 
-                        {/* Trust Indicators - Subtle */}
-                        <div className="pt-12 fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <p className="text-sm text-gray-500 mb-4 font-medium">Trusted by enterprise leaders across</p>
-                            <div className="flex flex-wrap justify-center gap-6 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                                <span className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                                    USA
-                                </span>
-                                <span className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                                    UAE
-                                </span>
-                                <span className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                                    UK
-                                </span>
-                                <span className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                                    India
-                                </span>
+                                        {/* Feature list */}
+                                        <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                                            <div className="space-y-3">
+                                                {[
+                                                    'Real-time Intelligence',
+                                                    'AI-Ready Systems',
+                                                    'Continuous Planning'
+                                                ].map((feature, i) => (
+                                                    <div key={i} className="flex items-center gap-3">
+                                                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                                            <Check className="w-3 h-3 text-primary" />
+                                                        </div>
+                                                        <span className="text-sm font-medium text-gray-700">{feature}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Floating accent */}
+                                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
                             </div>
                         </div>
                     </div>
