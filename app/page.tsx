@@ -2,11 +2,10 @@
 
 import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building, Check, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import NetworkBackground from '@/components/NetworkBackground'
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0)
-    const [clientsCount, setClientsCount] = useState(0)
-    const [industriesCount, setIndustriesCount] = useState(0)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,40 +26,14 @@ export default function Home() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    // Counter animation effect
-    useEffect(() => {
-        const duration = 2000 // 2 seconds
-        const clientsTarget = 50
-        const industriesTarget = 10
-        const frameRate = 60
-        const totalFrames = (duration / 1000) * frameRate
-
-        let frame = 0
-        const counter = setInterval(() => {
-            frame++
-            const progress = frame / totalFrames
-
-            setClientsCount(Math.floor(progress * clientsTarget))
-            setIndustriesCount(Math.floor(progress * industriesTarget))
-
-            if (frame >= totalFrames) {
-                setClientsCount(clientsTarget)
-                setIndustriesCount(industriesTarget)
-                clearInterval(counter)
-            }
-        }, 1000 / frameRate)
-
-        return () => clearInterval(counter)
-    }, [])
-
     return (
         <div className="min-h-screen bg-white text-gray-900">
             {/* Simple Fixed Header */}
-            <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b transition-all duration-300 ${scrollY > 50 ? 'shadow-md' : 'border-gray-100'}`}>
+            <header className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b transition-all duration-300 ${scrollY > 50 ? 'shadow-md' : 'border-gray-100'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 md:h-20">
                         <a href="/" className="flex items-center">
-                            <img src="/nexplan-logo.png" alt="Nexplan" className="h-8 md:h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                            <img src="/nexplan-logo.png" alt="Nexplan" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
                         </a>
                         <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-sm md:text-base font-medium">
                             Get in Touch
@@ -70,87 +43,30 @@ export default function Home() {
             </header>
 
             {/* Hero Section - Compact Professional Design */}
-            <section className="relative pt-20 pb-8 md:pt-24 md:pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
+                <NetworkBackground />
                 {/* Subtle background decoration */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
                 <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Column - Content */}
-                        <div className="space-y-6 text-center lg:text-left">
+                    <div className="max-w-5xl mx-auto">
+                        {/* Content */}
+                        <div className="space-y-6 text-center">
                             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
                                 <span className="block mt-2 text-primary">Enterprise Intelligence</span>
                             </h1>
 
-                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                                Transform enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span> that connects strategy, finance, operations, and workforce.
+                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                                <span className="font-bold text-gray-900">Nexplan</span> transforms enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span>. From static budgets to continuous foresight, empowering faster, smarter decisions.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center">
                                 <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-sm font-semibold">
-                                    Get Started
+                                    Transform now
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </a>
-                                <a href="#expertise" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 border border-gray-200 rounded-lg hover:border-primary/30 hover:bg-gray-50 transition-all text-sm font-semibold">
-                                    View Our Work
-                                </a>
-                            </div>
 
-                            {/* Trust Bar - Compact */}
-                            <div className="pt-6 border-t border-gray-100 text-center">
-                                <p className="text-xs text-gray-500 mb-3">Trusted by leaders across</p>
-                                <div className="flex justify-center gap-4 text-xs font-semibold text-gray-400">
-                                    {['USA', 'UAE', 'UK', 'India'].map((loc, i) => (
-                                        <span key={i} className="flex items-center gap-1.5">
-                                            <div className="w-1 h-1 rounded-full bg-primary"></div>
-                                            {loc}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right Column - Visual Element */}
-                        <div className="relative hidden lg:block">
-                            <div className="relative">
-                                {/* Abstract visual representation */}
-                                <div className="bg-gradient-to-br from-primary/10 to-blue-100/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-100">
-                                    <div className="space-y-4">
-                                        {/* Stats Cards */}
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                                <div className="text-2xl font-bold text-primary mb-1">{clientsCount}+</div>
-                                                <div className="text-xs text-gray-600">Enterprise Clients</div>
-                                            </div>
-                                            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                                <div className="text-2xl font-bold text-primary mb-1">{industriesCount}+</div>
-                                                <div className="text-xs text-gray-600">Industries Served</div>
-                                            </div>
-                                        </div>
-
-                                        {/* Feature list */}
-                                        <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-                                            <div className="space-y-3">
-                                                {[
-                                                    'Real-time Intelligence',
-                                                    'AI-Ready Systems',
-                                                    'Continuous Planning'
-                                                ].map((feature, i) => (
-                                                    <div key={i} className="flex items-center gap-3">
-                                                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                                            <Check className="w-3 h-3 text-primary" />
-                                                        </div>
-                                                        <span className="text-sm font-medium text-gray-700">{feature}</span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Floating accent */}
-                                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +90,7 @@ export default function Home() {
 
                     <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed fade-in-up max-w-3xl mx-auto text-center">
                         <p>
-                            Planning is evolving. Enterprises today need systems that <span className="text-primary font-semibold">sense change</span>, learn from data, and guide leadership decisions continuously.
+                            Planning is evolving. Enterprises today need systems that <span className="text-gray-900">sense change</span>, learn from data, and guide leadership decisions continuously.
                         </p>
                         <p>
                             Nexplan helps organizations move beyond traditional planning into intelligent, adaptive decision systems focused on strategy, foresight, and actionable intelligence.
@@ -574,6 +490,14 @@ export default function Home() {
                                     <Instagram className="w-4 h-4" />
                                 </a>
                             </div>
+                        </div>
+
+                        {/* Locations */}
+                        <div className="flex justify-center gap-6 text-sm font-semibold text-gray-500 uppercase tracking-widest pt-2">
+                            <span>USA</span>
+                            <span>UAE</span>
+                            <span>UK</span>
+                            <span>India</span>
                         </div>
 
                         <div className="pt-6 border-t border-gray-100">
