@@ -27,13 +27,13 @@ export default function Home() {
     }, [])
 
     return (
-        <div className="min-h-screen bg-white text-gray-900">
+        <div className="min-h-screen bg-[#FAFCFF] text-gray-900">
             {/* Simple Fixed Header */}
-            <header className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b transition-all duration-300 ${scrollY > 50 ? 'shadow-md' : 'border-gray-100'}`}>
+            <header className={`fixed top-0 left-0 right-0 z-50 bg-[#FAFCFF]/95 backdrop-blur-sm border-b transition-all duration-300 ${scrollY > 50 ? 'shadow-md' : 'border-gray-100'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16 md:h-20">
                         <a href="/" className="flex items-center">
-                            <img src="/nexplan-logo.png" alt="Nexplan" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                            <img src="/nexplan-logo-v2.png" alt="Nexplan" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
                         </a>
                         <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-sm md:text-base font-medium">
                             Get in Touch
@@ -43,47 +43,56 @@ export default function Home() {
             </header>
 
             {/* Hero Section - Compact Professional Design */}
-            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/40 via-white to-white overflow-hidden">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF] overflow-hidden">
                 <NetworkBackground />
                 {/* Subtle background decoration */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
                 <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="max-w-5xl mx-auto">
-                        {/* Content */}
-                        <div className="space-y-6 text-center">
-                            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                        {/* Left Column: Content (Centered on mobile, Left on desktop) */}
+                        <div className="space-y-8 text-center lg:text-left fade-in-up pt-10 lg:pt-0">
+                            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                                 Reimagining Planning as
                                 <span className="block mt-2 text-primary">Enterprise Intelligence</span>
                             </h1>
 
-                            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                            <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                                 <span className="font-bold text-gray-900">Nexplan</span> transforms enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span>. From static budgets to continuous foresight, empowering faster, smarter decisions.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center">
-                                <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-sm font-semibold">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-base font-semibold">
                                     Transform now
-                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
-
                             </div>
+                        </div>
+
+                        {/* Right Column: Image (Hidden on mobile) */}
+                        <div className="hidden lg:block fade-in-up delay-100 relative">
+                            {/* Glow effect behind image */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
+
+                            <img
+                                src="/nexplan Header.png"
+                                alt="Nexplan Enterprise Platform"
+                                className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Philosophy Section */}
-            <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
-                {/* Subtle background decoration */}
-                <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
 
                 <div className="max-w-5xl mx-auto relative z-10">
                     <div className="text-center mb-10 md:mb-14 fade-in-up">
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Philosophy</span>
-                        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
                             From Static Cycles to <br className="hidden md:block" />
-                            <span className="text-primary bg-primary/5 px-2 rounded-lg">Real-Time Intelligence</span>
+                            <span className="text-primary">Real-Time Intelligence</span>
                         </h2>
                         <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8"></div>
                     </div>
@@ -98,8 +107,8 @@ export default function Home() {
                     </div>
 
                     {/* Leadership Capability Box - Premium Card Style */}
-                    <div className="mt-12 md:mt-16 fade-in-up">
-                        <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-14 border border-gray-100 shadow-2xl shadow-gray-200/50 relative overflow-hidden group">
+                    <div className="mt-24 md:mt-32 fade-in-up">
+                        <div className="bg-white rounded-3xl p-8 md:p-14 relative overflow-hidden group">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
 
                             <h3 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-center text-gray-900">
@@ -117,7 +126,7 @@ export default function Home() {
                                     { title: "Business-Owned Models", desc: "Over IT-owned systems" },
                                     { title: "Ready for AI", desc: "Enabled capabilities" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 md:p-8 rounded-2xl text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:min-w-[220px] group/card">
+                                    <div key={i} className="bg-white p-6 md:p-8 rounded-2xl text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:min-w-[220px] group/card">
                                         <div className="font-heading font-bold text-gray-900 text-base md:text-lg lg:text-xl mb-3 group-hover/card:text-primary transition-colors">{item.title}</div>
                                         <div className="text-gray-500 text-xs md:text-sm font-bold uppercase tracking-widest">{item.desc}</div>
                                     </div>
@@ -129,7 +138,7 @@ export default function Home() {
             </section>
 
             {/* Our Approach */}
-            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16 md:mb-24 fade-in-up">
                         <span className="text-primary font-bold tracking-wider uppercase text-xs mb-3 block">Methodology</span>
@@ -188,10 +197,10 @@ export default function Home() {
             </section>
 
             {/* Enterprise Expertise */}
-            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-white">
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-gray-900">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-gray-900">
                             Enterprise Expertise <span className="text-primary">Across Sectors</span>
                         </h2>
                         <p className="text-gray-600 text-sm md:text-base">Planning for operations, capacity, and strategic growth across industries</p>
@@ -227,10 +236,10 @@ export default function Home() {
             </section>
 
             {/* Use Cases */}
-            <section className="py-12 md:py-18 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
                             Enterprise Planning <span className="text-primary">Use Cases</span>
                         </h2>
                     </div>
@@ -258,14 +267,13 @@ export default function Home() {
                                 ]
                             },
                             {
-                                title: "Sales & Revenue Teams",
+                                title: "Sales & Rev Team",
                                 items: [
-                                    "Sales Forecasting",
-                                    "Sales Capacity & Coverage Planning",
-                                    "Quota & Incentive Planning",
-                                    "Territory Alignment",
-                                    "Account Scoring & Segmentation",
-                                    "Pipeline & Revenue Planning"
+                                    "Sales Forecasting & Revenue Intelligence",
+                                    "Quota Management & Incentive Compensation",
+                                    "Territory Alignment & Coverage Optimization",
+                                    "Sales Capacity & Headcount Planning",
+                                    "Pipeline Analytics & Opportunity Management"
                                 ]
                             },
                             {
@@ -296,7 +304,7 @@ export default function Home() {
             </section>
 
             {/* Technology Ecosystem */}
-            <section className="py-6 md:py-10 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-100">
+            <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF] border-t border-gray-100">
                 <div className="max-w-6xl mx-auto text-center mb-6">
                     <div className="fade-in-up">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
@@ -338,10 +346,10 @@ export default function Home() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="py-6 md:py-10 px-4 sm:px-6 lg:px-8 bg-white">
+            <section id="contact" className="py-6 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-6xl mx-auto">
                     <div className="fade-in-up text-center space-y-4 mb-8">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                             Get In <span className="text-primary">Touch</span>
                         </h2>
 
@@ -455,7 +463,7 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className="border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8 bg-white">
+            <footer className="border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center space-y-6">
                         <div>
