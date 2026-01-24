@@ -53,15 +53,15 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         {/* Left Column: Content (Centered on mobile, Left on desktop) */}
                         <div className="space-y-8 text-center lg:text-left fade-in-up pt-10 lg:pt-0 lg:-mr-32 xl:-mr-40">
-                            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.4] tracking-tight">
+                            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[1.4] tracking-tight">
                                 <span className="block text-gray-900">Transforming Planning into</span>
-                                <span className="block mt-2 pb-2 text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Enterprise Intelligence</span>
+                                <span className="block mt-0 md:mt-2 pb-2 text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Enterprise Intelligence</span>
                             </h1>
 
                             <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto lg:mx-0">
-                                <span className="block">Turn enterprise planning into a unified decision layer,</span>
-                                <span className="block mt-1">from static cycles to continuous foresight,</span>
-                                <span className="block mt-1">empowering faster, smarter decisions.</span>
+                                <span className="inline md:block">Turn enterprise planning into a unified decision layer,</span>
+                                <span className="inline md:block mt-0 md:mt-1"> from static cycles to continuous foresight,</span>
+                                <span className="inline md:block mt-0 md:mt-1"> empowering faster, smarter decisions.</span>
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -93,9 +93,9 @@ export default function Home() {
                 <div className="max-w-5xl mx-auto relative z-10">
                     <div className="text-center mb-10 md:mb-14 fade-in-up">
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Perspective</span>
-                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Planning as a <br className="hidden md:block" />
-                            <span className="text-primary">Strategic Capability</span>
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight md:leading-normal">
+                            <span className="block">Planning as a</span>
+                            <span className="block mt-0 md:mt-2 text-primary">Strategic Capability</span>
                         </h2>
                         <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8"></div>
                     </div>
@@ -290,8 +290,9 @@ export default function Home() {
             <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#FAFCFF]">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 md:mb-16 fade-in-up">
-                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                            Enterprise Planning <span className="text-primary">Use Cases</span>
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 leading-tight md:leading-normal">
+                            <span className="block">Enterprise Planning</span>
+                            <span className="block mt-0 md:mt-2 text-primary">Use Cases</span>
                         </h2>
                     </div>
 
