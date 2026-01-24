@@ -1,11 +1,12 @@
 'use client'
 
-import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building, Check, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
+import { ArrowRight, Mail, Phone, Globe, Sparkles, Brain, Zap, Target, Users, TrendingUp, Rocket, Factory, ShoppingBag, Cpu, Building2, Lightbulb, Hammer, FlaskConical, Heart, Building, Check, Linkedin, Twitter, Facebook, Instagram, ChevronDown } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import NetworkBackground from '@/components/NetworkBackground'
 
 export default function Home() {
     const [scrollY, setScrollY] = useState(0)
+    const [openRow, setOpenRow] = useState<number | null>(null)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,7 +36,7 @@ export default function Home() {
                         <a href="/" className="flex items-center">
                             <img src="/nexplan-logo-v2.png" alt="Nexplan" className="h-12 md:h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
                         </a>
-                        <a href="#contact" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-sm md:text-base font-medium">
+                        <a href="#contact" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-colors text-base font-bold shadow-sm hover:shadow-md">
                             Get in Touch
                         </a>
                     </div>
@@ -51,26 +52,28 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         {/* Left Column: Content (Centered on mobile, Left on desktop) */}
-                        <div className="space-y-8 text-center lg:text-left fade-in-up pt-10 lg:pt-0">
-                            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
-                                Reimagining Planning as
-                                <span className="block mt-2 text-primary">Enterprise Intelligence</span>
+                        <div className="space-y-8 text-center lg:text-left fade-in-up pt-10 lg:pt-0 lg:-mr-32 xl:-mr-40">
+                            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.4] tracking-tight">
+                                <span className="block text-gray-900">Transforming Planning into</span>
+                                <span className="block mt-2 pb-2 text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Enterprise Intelligence</span>
                             </h1>
 
-                            <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                <span className="font-bold text-gray-900">Nexplan</span> transforms enterprise planning into a <span className="font-semibold text-gray-900">decision intelligence layer</span>. From static budgets to continuous foresight, empowering faster, smarter decisions.
+                            <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto lg:mx-0">
+                                <span className="block">Turn enterprise planning into a unified decision layer,</span>
+                                <span className="block mt-1">from static cycles to continuous foresight,</span>
+                                <span className="block mt-1">empowering faster, smarter decisions.</span>
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-base font-semibold">
-                                    Transform now
+                                <a href="#contact" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-lg font-bold">
+                                    Book a discovery call
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </div>
                         </div>
 
                         {/* Right Column: Image (Hidden on mobile) */}
-                        <div className="hidden lg:block fade-in-up delay-100 relative">
+                        <div className="hidden lg:block fade-in-up delay-100 relative ml-8">
                             {/* Glow effect behind image */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
 
@@ -89,51 +92,24 @@ export default function Home() {
 
                 <div className="max-w-5xl mx-auto relative z-10">
                     <div className="text-center mb-10 md:mb-14 fade-in-up">
-                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Philosophy</span>
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Perspective</span>
                         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            From Static Cycles to <br className="hidden md:block" />
-                            <span className="text-primary">Real-Time Intelligence</span>
+                            Planning as a <br className="hidden md:block" />
+                            <span className="text-primary">Strategic Capability</span>
                         </h2>
                         <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mt-8"></div>
                     </div>
 
                     <div className="space-y-6 text-base md:text-lg text-gray-600 leading-relaxed fade-in-up max-w-3xl mx-auto text-center">
                         <p>
-                            Planning is evolving. Enterprises today need systems that <span className="text-gray-900">sense change</span>, learn from data, and guide leadership decisions continuously.
+                            Planning is no longer a periodic exercise. Modern enterprises need systems that anticipate change, integrate data, and support real-time decision-making.
                         </p>
                         <p>
-                            Nexplan helps organizations move beyond traditional planning into intelligent, adaptive decision systems focused on strategy, foresight, and actionable intelligence.
+                            Nexplan helps organizations evolve beyond traditional budgeting and forecasting into adaptive decision systems that prioritize strategy, foresight, and actionable intelligence.
                         </p>
                     </div>
 
-                    {/* Leadership Capability Box - Premium Card Style */}
-                    <div className="mt-24 md:mt-32 fade-in-up">
-                        <div className="bg-white rounded-3xl p-8 md:p-14 relative overflow-hidden group">
-                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
 
-                            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-5 text-center text-gray-900">
-                                Planning as a <span className="text-primary">Leadership Capability</span>
-                            </h3>
-                            <p className="text-center text-base md:text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                                Planning today is a leadership function, not just a finance process. We create a shared decision intelligence layer across the enterprise.
-                            </p>
-
-                            <div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 md:gap-8 max-w-5xl mx-auto">
-                                {[
-                                    { title: "Foresight", desc: "Over hindsight" },
-                                    { title: "Signals", desc: "Over static assumptions" },
-                                    { title: "Continuous Intelligence", desc: "Over annual cycles" },
-                                    { title: "Business-Owned Models", desc: "Over IT-owned systems" },
-                                    { title: "Ready for AI", desc: "Enabled capabilities" },
-                                ].map((item, i) => (
-                                    <div key={i} className="bg-white p-6 md:p-8 rounded-2xl text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:min-w-[220px] group/card">
-                                        <div className="font-heading font-bold text-gray-900 text-base md:text-lg lg:text-xl mb-3 group-hover/card:text-primary transition-colors">{item.title}</div>
-                                        <div className="text-gray-500 text-xs md:text-sm font-bold uppercase tracking-widest">{item.desc}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -155,7 +131,7 @@ export default function Home() {
                             {
                                 num: "01",
                                 title: "Enterprise Planning Strategy",
-                                desc: "We help leadership teams define how planning supports business strategy — aligning finance, operations, workforce, and growth priorities into a single decision framework.",
+                                desc: "We help leadership teams define how planning supports business strategy, aligning finance, operations, workforce, and growth priorities into a single decision framework.",
                                 icon: Target
                             },
                             {
@@ -167,13 +143,13 @@ export default function Home() {
                             {
                                 num: "03",
                                 title: "Adoption, Enablement & Change",
-                                desc: "We ensure planning becomes a living capability — driving adoption through executive alignment, training, and capability building across teams.",
+                                desc: "We ensure planning becomes a living capability, driving adoption through executive alignment, training, and capability building across teams.",
                                 icon: Users
                             },
                             {
                                 num: "04",
                                 title: "Continuous Optimization & Support",
-                                desc: "We proactively evolve planning environments with scenario intelligence, enhancements, and roadmap development — so planning keeps pace with business change.",
+                                desc: "We proactively evolve planning environments with scenario intelligence, enhancements, and roadmap development, so planning keeps pace with business change.",
                                 icon: TrendingUp
                             }
                         ].map((item, i) => (
@@ -206,31 +182,106 @@ export default function Home() {
                         <p className="text-gray-600 text-sm md:text-base">Planning for operations, capacity, and strategic growth across industries</p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-4 md:gap-6 fade-in-up">
+                    <div className="grid md:grid-cols-3 gap-6 fade-in-up">
                         {[
-                            { title: "Aerospace & Aviation", desc: "Planning for operations, capacity, and strategic growth", icon: Rocket },
-                            { title: "Telecommunications", desc: "Forecasting, revenue planning, and network optimization", icon: Zap },
-                            { title: "Manufacturing", desc: "Demand, supply chain, and capital planning", icon: Factory },
-                            { title: "Technology & SaaS", desc: "Subscription revenue, headcount, and product portfolio planning", icon: Cpu },
-                            { title: "Banking & Insurance", desc: "Financial planning, risk management, and capital allocation", icon: Building2 },
-                            { title: "Energy & Utilities", desc: "Project, capex, and operational forecasting", icon: Lightbulb },
-                            { title: "Metal & Mining", desc: "Production, resource allocation, and investment planning", icon: Hammer },
-                            { title: "Pharmaceuticals & Life Sciences", desc: "R&D investment, supply chain, and revenue forecasting", icon: FlaskConical },
-                            { title: "Healthcare", desc: "Resource optimization and patient care planning", icon: Heart },
-                            { title: "Real Estate & Construction", desc: "Project lifecycle and capital investment planning", icon: Building }
-                        ].map((item, i) => (
-                            <div key={i} className="group p-5 md:p-6 rounded-xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all">
-                                <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 p-3 rounded-lg bg-white group-hover:bg-primary/5 border border-gray-100 group-hover:border-primary/20 text-primary transition-all">
-                                        <item.icon className="w-6 h-6" />
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                        <h3 className="font-bold text-gray-900 mb-1 text-base md:text-lg group-hover:text-primary transition-colors">{item.title}</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                            {
+                                title: "Aerospace & Aviation",
+                                items: ["Fleet and capacity planning", "Maintenance and operations forecasting", "Network and route strategy"],
+                                icon: Rocket
+                            },
+                            {
+                                title: "Telecommunications",
+                                items: ["Revenue and ARPU forecasting", "Network capacity and CapEx planning", "Customer and churn scenario modeling"],
+                                icon: Zap
+                            },
+                            {
+                                title: "Manufacturing",
+                                items: ["Demand and production planning", "Supply chain and inventory optimization", "Capacity and investment prioritization"],
+                                icon: Factory
+                            },
+                            {
+                                title: "Technology & SaaS",
+                                items: ["Subscription revenue and ARR forecasting", "Headcount and growth planning", "Product portfolio and pricing strategy"],
+                                icon: Cpu
+                            },
+                            {
+                                title: "Banking & Insurance",
+                                items: ["Financial and capital planning", "Risk and scenario intelligence", "Portfolio profitability management"],
+                                icon: Building2
+                            },
+                            {
+                                title: "Energy & Utilities",
+                                items: ["Project and CapEx forecasting", "Asset and resource planning", "Operational performance modeling"],
+                                icon: Lightbulb
+                            },
+                            {
+                                title: "Metal & Mining",
+                                items: ["Production and capacity planning", "Resource allocation", "Investment and cost optimization"],
+                                icon: Hammer
+                            },
+                            {
+                                title: "Pharma & Life Sciences",
+                                items: ["R&D portfolio planning", "Supply chain and demand forecasting", "Revenue and market expansion modeling"],
+                                icon: FlaskConical
+                            },
+                            {
+                                title: "Healthcare",
+                                items: ["Workforce and capacity planning", "Cost and resource optimization", "Strategic growth forecasting"],
+                                icon: Heart
+                            },
+                            {
+                                title: "Real Estate & Construction",
+                                items: ["Project lifecycle planning", "Capital investment and cash flow forecasting", "Portfolio optimization"],
+                                icon: Building
+                            },
+                            {
+                                title: "Retail",
+                                items: ["OTB and merchandise planning", "Demand and inventory optimization", "Promotion and margin planning"],
+                                icon: ShoppingBag
+                            },
+                            {
+                                title: "Logistics & Supply Chain",
+                                items: ["Transportation and fleet planning", "Network and warehouse optimization", "Capacity and service-level forecasting"],
+                                icon: TrendingUp
+                            }
+                        ].map((item, i) => {
+                            const itemsPerRow = 3
+                            const currentRow = Math.floor(i / itemsPerRow)
+                            const isOpen = openRow === currentRow
+                            const toggleAccordion = () => {
+                                setOpenRow(openRow === currentRow ? null : currentRow)
+                            }
+                            return (
+                                <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all group">
+                                    <button
+                                        onClick={toggleAccordion}
+                                        className="w-full p-6 text-left"
+                                    >
+                                        <div className="flex items-center justify-between gap-3 mb-2">
+                                            <div className="flex items-center gap-3 flex-1">
+                                                <div className="flex-shrink-0 p-3 rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                                    <item.icon className="w-5 h-5" />
+                                                </div>
+                                                <h3 className="font-bold text-gray-900 text-base md:text-lg group-hover:text-primary transition-colors">{item.title}</h3>
+                                            </div>
+                                            <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                        </div>
+                                    </button>
+                                    <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                        <div className="px-6 pb-6 pt-2">
+                                            <ul className="space-y-2">
+                                                {item.items.map((point, j) => (
+                                                    <li key={j} className="text-sm text-gray-600 flex items-start gap-2">
+                                                        <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                                                        <span className="leading-relaxed">{point}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            )
+                        })}
                     </div>
                 </div>
             </section>
@@ -247,43 +298,47 @@ export default function Home() {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {[
                             {
-                                title: "Finance Teams",
+                                title: "Sales & Revenue",
                                 items: [
-                                    "Budget Planning & Forecasting",
-                                    "P&L, Cash Flow & Balance Sheet Planning",
-                                    "Rolling Forecasts & Scenario Modeling",
-                                    "Variance Analysis & Performance Management",
-                                    "Strategic Investment & Capital Allocation"
+                                    "Sales forecasting and pipeline management",
+                                    "Quota and territory planning",
+                                    "Account scoring and customer segmentation",
+                                    "Promotion, discount, and campaign planning",
+                                    "Revenue scenario analysis and modeling",
+                                    "Channel and product portfolio optimization"
                                 ]
                             },
                             {
-                                title: "HR & Workforce Teams",
+                                title: "Operations",
                                 items: [
-                                    "Headcount Planning & Optimization",
-                                    "Workforce Forecasting & Scenario Planning",
-                                    "Talent Allocation & Capacity Planning",
-                                    "Compensation & Benefits Planning",
-                                    "Skills & Succession Planning"
+                                    "Demand planning and production scheduling",
+                                    "Supply chain and inventory optimization",
+                                    "Project and resource planning",
+                                    "Capacity and workforce utilization",
+                                    "Operational cost forecasting and efficiency tracking",
+                                    "Logistics and network optimization"
                                 ]
                             },
                             {
-                                title: "Sales & Rev Team",
+                                title: "Finance",
                                 items: [
-                                    "Sales Forecasting & Revenue Intelligence",
-                                    "Quota Management & Incentive Compensation",
-                                    "Territory Alignment & Coverage Optimization",
-                                    "Sales Capacity & Headcount Planning",
-                                    "Pipeline Analytics & Opportunity Management"
+                                    "Budgeting, forecasting, and rolling forecasts",
+                                    "P&L, cash flow, and balance sheet planning",
+                                    "Capital expenditure (CapEx) and investment planning",
+                                    "Strategic scenario planning",
+                                    "Cost allocation and profitability modeling",
+                                    "Financial consolidation and reporting"
                                 ]
                             },
                             {
-                                title: "Retail & Merch Teams",
+                                title: "HR & Workforce",
                                 items: [
-                                    "Open-to-Buy (OTB) Planning",
-                                    "Merchandise Financial Planning (MFP)",
-                                    "Assortment & Category Planning",
-                                    "Inventory & Sell-Through Optimization",
-                                    "Promotion & Markdown Planning"
+                                    "Headcount and workforce allocation",
+                                    "Talent acquisition and retention planning",
+                                    "Compensation, benefits, and payroll forecasting",
+                                    "Workforce capacity and skills planning",
+                                    "Succession Planning",
+                                    "Resource utilization and productivity analysis"
                                 ]
                             }
                         ].map((useCase, i) => (
@@ -413,7 +468,7 @@ export default function Home() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all hover:shadow-lg font-bold text-base md:text-lg"
+                                        className="w-full px-8 py-4 bg-primary text-white rounded-lg hover:bg-[#0052CC] transition-all hover:shadow-lg font-bold text-lg"
                                     >
                                         Send Message
                                     </button>
@@ -436,24 +491,37 @@ export default function Home() {
                                         </div>
                                     </a>
 
-                                    <a href="tel:+971547912051" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
+                                    <a href="tel:+971509269710" className="flex items-start gap-4 p-5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group">
                                         <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mt-1">
                                             <Phone className="w-6 h-6" />
                                         </div>
                                         <div>
                                             <div className="text-sm text-white/70 mb-1.5 font-medium">Phone</div>
-                                            <div className="font-bold text-base">+971 547912051</div>
+                                            <div className="font-bold text-base">+971 50 926 9710</div>
                                         </div>
                                     </a>
 
                                 </div>
 
                                 <div className="mt-8 pt-8 border-t border-white/20">
-                                    <div className="text-center space-y-3">
+                                    <div className="text-center space-y-4">
                                         <div className="text-lg font-bold">Let's Start the Conversation</div>
                                         <p className="text-sm text-white/80 leading-relaxed">
                                             Your trusted partner in transforming planning into strategic intelligence.
                                         </p>
+
+                                        <div className="pt-6 mt-2 border-t border-white/10">
+                                            <p className="text-xs text-white/60 mb-3 uppercase tracking-wider">Serving Globally</p>
+                                            <div className="flex justify-center items-center gap-3 text-sm font-bold text-white uppercase tracking-widest flex-wrap">
+                                                <span className="cursor-pointer">USA</span>
+                                                <span className="text-white/40 text-xs">|</span>
+                                                <span className="cursor-pointer">UAE</span>
+                                                <span className="text-white/40 text-xs">|</span>
+                                                <span className="cursor-pointer">UK</span>
+                                                <span className="text-white/40 text-xs">|</span>
+                                                <span className="cursor-pointer">India</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -468,45 +536,24 @@ export default function Home() {
                     <div className="text-center space-y-6">
                         <div>
                             <p className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                                <span className="text-primary font-bold">Nexplan</span>: Intelligent Planning for Decision-Driven Enterprises
+                                <span className="text-primary font-bold">Nexplan</span> — Enabling Intelligent, Adaptive Enterprise Planning
                             </p>
-                            <p className="text-xs font-bold tracking-[0.2em] text-primary/70 uppercase mt-3">Planning Reimagined</p>
+
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-gray-600">
-                            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a>
-                            <span className="text-gray-300">|</span>
-                            <a href="mailto:info@nexplan.ai" className="hover:text-primary transition-colors">info@nexplan.ai</a>
-                        </div>
+
 
                         {/* Social Media */}
                         <div className="pt-6">
                             <p className="text-xs text-gray-500 mb-4">Follow Us</p>
                             <div className="flex justify-center gap-4">
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <a href="https://www.linkedin.com/company/nexplanai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
                                     <Linkedin className="w-4 h-4" />
-                                </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                    <Twitter className="w-4 h-4" />
-                                </a>
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                    <Facebook className="w-4 h-4" />
-                                </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white text-gray-600 flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                    <Instagram className="w-4 h-4" />
                                 </a>
                             </div>
                         </div>
 
-                        {/* Locations */}
-                        <div className="flex justify-center gap-6 text-sm font-semibold text-gray-500 uppercase tracking-widest pt-2">
-                            <span>USA</span>
-                            <span>UAE</span>
-                            <span>UK</span>
-                            <span>India</span>
-                        </div>
+
 
                         <div className="pt-6 border-t border-gray-100">
                             <p className="text-xs text-gray-400">
